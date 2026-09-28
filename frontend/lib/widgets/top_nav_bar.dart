@@ -22,10 +22,12 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
     final auth = context.watch<AuthState>();
     final notif = context.watch<NotificationService>();
     final currentRole = auth.currentRole;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = screenWidth < 700;
 
     return Container(
       height: 64,
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.symmetric(horizontal: isMobile ? 12 : 20),
       decoration: const BoxDecoration(
         color: Colors.white,
         border: Border(bottom: BorderSide(color: AppTheme.border, width: 1)),
@@ -46,37 +48,48 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
                   child: Icon(Icons.bolt, color: Colors.white, size: 20),
                 ),
               ),
-              const SizedBox(width: 10),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    'DeskAI',
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w800,
-                      color: AppTheme.textPrimary,
-                      letterSpacing: -0.3,
+              const SizedBox(width: 8),
+              if (!isMobile)
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'DeskAI',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w800,
+                        color: AppTheme.textPrimary,
+                        letterSpacing: -0.3,
+                      ),
                     ),
-                  ),
-                  Text(
-                    title,
-                    style: const TextStyle(
-                      fontSize: 11,
-                      fontWeight: FontWeight.w500,
-                      color: AppTheme.textMuted,
+                    Text(
+                      title,
+                      style: const TextStyle(
+                        fontSize: 11,
+                        fontWeight: FontWeight.w500,
+                        color: AppTheme.textMuted,
+                      ),
                     ),
+                  ],
+                )
+              else
+                const Text(
+                  'DeskAI',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w800,
+                    color: AppTheme.textPrimary,
+                    letterSpacing: -0.3,
                   ),
-                ],
-              ),
+                ),
             ],
           ),
           const Spacer(),
 
           // 1-Click Role Switcher
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+            padding: EdgeInsets.symmetric(horizontal: isMobile ? 6 : 10, vertical: 4),
             decoration: BoxDecoration(
               color: AppTheme.primaryLight,
               borderRadius: BorderRadius.circular(20),
@@ -86,39 +99,32 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 const Icon(Icons.swap_horiz, size: 16, color: AppTheme.primary),
-                const SizedBox(width: 6),
+                SizedBox(width: isMobile ? 2 : 6),
                 DropdownButtonHideUnderline(
                   child: DropdownButton<String>(
                     value: currentRole,
                     isDense: true,
                     icon: const Icon(Icons.arrow_drop_down, color: AppTheme.primary, size: 18),
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: AppTheme.primary,
-                      fontSize: 12,
+                      fontSize: isMobile ? 11 : 12,
                       fontWeight: FontWeight.w700,
                     ),
-                    items: const [
-                      DropdownMenuItem(
-                        value: 'REQUESTER',
-                        child: Text('Requester (Alex Rivera)'),
-                      ),
-                      DropdownMenuItem(
-                        value: 'OPERATOR',
-                        child: Text('Operator (Priya N.)'),
-                      ),
-                      DropdownMenuItem(
-                        value: 'TEAM_LEAD',
-                        child: Text('Team Lead (Sarah J.)'),
-                      ),
-                      DropdownMenuItem(
-                        value: 'MANAGER',
-                        child: Text('Manager (Marcus V.)'),
-                      ),
-                      DropdownMenuItem(
-                        value: 'ADMIN',
-                        child: Text('Super Admin (Elena R.)'),
-                      ),
-                    ],
+                    items: isMobile
+                        ? const [
+                            DropdownMenuItem(value: 'REQUESTER', child: Text('Requester')),
+                            DropdownMenuItem(value: 'OPERATOR', child: Text('Operator')),
+                            DropdownMenuItem(value: 'TEAM_LEAD', child: Text('Team Lead')),
+                            DropdownMenuItem(value: 'MANAGER', child: Text('Manager')),
+                            DropdownMenuItem(value: 'ADMIN', child: Text('Admin')),
+                          ]
+                        : const [
+                            DropdownMenuItem(value: 'REQUESTER', child: Text('Requester (Alex Rivera)')),
+                            DropdownMenuItem(value: 'OPERATOR', child: Text('Operator (Priya N.)')),
+                            DropdownMenuItem(value: 'TEAM_LEAD', child: Text('Team Lead (Sarah J.)')),
+                            DropdownMenuItem(value: 'MANAGER', child: Text('Manager (Marcus V.)')),
+                            DropdownMenuItem(value: 'ADMIN', child: Text('Super Admin (Elena R.)')),
+                          ],
                     onChanged: (newRole) {
                       if (newRole != null && newRole != currentRole) {
                         auth.switchDemoRole(newRole);
@@ -129,15 +135,17 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
               ],
             ),
           ),
-          const SizedBox(width: 14),
+          SizedBox(width: isMobile ? 6 : 12),
 
           // Notification Bell
           IconButton(
             tooltip: 'In-app Notifications',
+            padding: EdgeInsets.zero,
+            constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
             icon: Stack(
               clipBehavior: Clip.none,
               children: [
-                const Icon(Icons.notifications_outlined, color: AppTheme.textSecondary, size: 22),
+                const Icon(Icons.notifications_outlined, color: AppTheme.textSecondary, size: 20),
                 if (notif.unreadCount > 0)
                   Positioned(
                     right: -2,
@@ -164,33 +172,37 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
             ),
             onPressed: () => _showNotificationsModal(context, notif),
           ),
-          const SizedBox(width: 8),
+          SizedBox(width: isMobile ? 4 : 8),
 
           // User Profile & Logout
           if (auth.currentUser != null) ...[
-            CircleAvatar(
-              radius: 16,
-              backgroundColor: AppTheme.primary,
-              child: Text(
-                auth.currentUser!.fullName.isNotEmpty
-                    ? auth.currentUser!.fullName[0]
-                    : 'U',
-                style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
+            if (!isMobile) ...[
+              CircleAvatar(
+                radius: 14,
+                backgroundColor: AppTheme.primary,
+                child: Text(
+                  auth.currentUser!.fullName.isNotEmpty
+                      ? auth.currentUser!.fullName[0]
+                      : 'U',
+                  style: const TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            const SizedBox(width: 8),
-            Text(
-              auth.currentUser!.fullName,
-              style: const TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w600,
-                color: AppTheme.textPrimary,
+              const SizedBox(width: 6),
+              Text(
+                auth.currentUser!.fullName,
+                style: const TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  color: AppTheme.textPrimary,
+                ),
               ),
-            ),
-            const SizedBox(width: 8),
+              const SizedBox(width: 4),
+            ],
             IconButton(
-              icon: const Icon(Icons.logout, size: 18, color: AppTheme.textMuted),
-              tooltip: 'Sign Out',
+              icon: const Icon(Icons.logout, size: 20, color: AppTheme.error),
+              tooltip: 'Sign Out (${auth.currentUser!.fullName})',
+              padding: EdgeInsets.zero,
+              constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
               onPressed: () => auth.logout(),
             ),
           ],

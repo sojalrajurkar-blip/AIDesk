@@ -50,13 +50,6 @@ class _RoleRouterState extends State<RoleRouter> {
   @override
   void initState() {
     super.initState();
-    // Auto-login default persona for seamless instant demo access
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      final auth = context.read<AuthState>();
-      if (!auth.isAuthenticated) {
-        auth.switchDemoRole('REQUESTER');
-      }
-    });
   }
 
   @override
