@@ -30,19 +30,19 @@
   "routes": [
     {
       "src": "/downloads/(.*)",
-      "dest": "frontend/build/web/downloads/$1"
+      "dest": "/downloads/$1"
     },
     {
       "src": "/assets/(.*)",
-      "dest": "frontend/build/web/assets/$1"
+      "dest": "/assets/$1"
     },
     {
       "src": "/canvaskit/(.*)",
-      "dest": "frontend/build/web/canvaskit/$1"
+      "dest": "/canvaskit/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "frontend/build/web/index.html"
+      "dest": "/index.html"
     }
   ]
 }
