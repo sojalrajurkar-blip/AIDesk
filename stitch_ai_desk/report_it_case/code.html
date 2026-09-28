@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior:none;font-family:'Inter',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#712ae2", "primary-fixed-dim": "#b4c5ff", "on-primary-fixed": "#00174b", "error-container": "#ffdad6", "surface-container": "#eaedff", "tertiary-fixed-dim": "#68dba9", "surface-container-high": "#e2e7ff", "on-surface-variant": "#434655", "secondary-fixed": "#eaddff", "on-tertiary-container": "#bdffdc", "primary-fixed": "#dbe1ff", "primary-container": "#2563eb", "surface-dim": "#d2d9f4", "outline": "#737686", "on-surface": "#131b2e", "on-tertiary": "#ffffff", "surface-container-highest": "#dae2fd", "outline-variant": "#c3c6d7", "on-primary": "#ffffff", "inverse-primary": "#b4c5ff", "surface": "#faf8ff", "on-tertiary-fixed": "#002114", "on-secondary-fixed-variant": "#5a00c6", "tertiary-container": "#007d57", "tertiary-fixed": "#85f8c4", "inverse-on-surface": "#eef0ff", "on-primary-fixed-variant": "#003ea8", "secondary-container": "#8a4cfc", "secondary-fixed-dim": "#d2bbff", "surface-tint": "#0053db", "on-background": "#131b2e", "surface-bright": "#faf8ff", "background": "#faf8ff", "surface-variant": "#dae2fd", "primary": "#004ac6", "on-secondary-container": "#fffbff", "on-primary-container": "#eeefff", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#005137", "on-error": "#ffffff", "on-secondary-fixed": "#25005a", "surface-container-low": "#f2f3ff", "error": "#ba1a1a", "tertiary": "#006243", "on-secondary": "#ffffff", "inverse-surface": "#283044" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "margin-sm": "0.75rem", "gutter-sm": "0.75rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem" }, "fontFamily": { "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "headline-md": ["Inter"], "label-lg": ["Inter"] }, "fontSize": { "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "headline-lg": ["30px", {"lineHeight": "38px", "fontWeight": "700"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "600"}], "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen antialiased selection:bg-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="DeskAI Brand Mark" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1X0TOHuKhdOyV6GEGfx88jaedGvEkCI0rZ3HdalrZJE1tMqPVfUxtVhmgBTo-wvdsszGrXQG4-UUmd9q5L-YIA1SqI0Ip6vWPrwH3zxaSziStRomOrlV8uFfFXfqOJ1cK84IJCzCUhhDXkuZdklJDwnYwMlXeF4OqfwNtkQ1c5fPZfL29Y7IVxtJLDWAd24t5z84egu5v_1gik3_4Fpp2rK0WXduNfZgV4Btyai5JkQhomPQHphfT5-lQ"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">DeskAI</span><div class="bg-surface-container-high px-space-xs py-0.5 rounded-full flex items-center gap-0.5"><button class="px-1.5 py-0.5 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-[0_1px_3px_rgba(15,23,42,0.06)] min-h-[20px]" type="button">Req</button><button class="px-1.5 py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm min-h-[20px]" type="button">Ops</button></div></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Report Issue</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button aria-label="User Profile" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDANwalO_zb-ScWOHiyeO6-zrajtiVgaxPie2IeE7s67C7eZkw9fxbvcgEQllcxLYlM3MSChUir9Hb-nr9-RLppZIyWfgSA5qe0M-kyX9VsbgOtXHNTnSw6QAZHwQC4zLLfUndgHa__D8iC2PzW0PMUDeAcDnZ6y8V_gWWkSeog_fvvv4EDw9Kap59fqG7RrNpPqLtdBlLHSQrVNrI-ALCYVWn8fteBujPnSW3WujCAaxqqbtji49_N"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-space-xl">
+<!-- Sub-header & Context Guidance -->
+<div class="pt-space-sm pb-space-md">
+<div class="flex items-center gap-space-xs text-primary mb-1">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Automated IT Dispatch</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Submit a problem or service request. AI will triage and route to the right team immediately.
+    </p>
+</div>
+<!-- Real-time AI Pre-Check Card -->
+<div class="bg-surface-container-high rounded-xl p-space-md shadow-sm mb-space-md relative overflow-hidden">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs mb-1 flex-wrap">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">
+            AI Pre-analysis
+          </span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            Zero duplicates (24h)
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-normal">
+          No duplicate reported on Floor 4 in last 24h. Recommend adding your desk number for faster desk-side support.
+        </p>
+</div>
+</div>
+</div>
+<!-- Form Fields Container -->
+<form class="flex flex-col gap-space-md" onsubmit="event.preventDefault();">
+<!-- Issue Title -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="issue-title">
+<span>Issue Summary <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Max 80 chars</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-12 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-lowest" id="issue-title" placeholder="Briefly describe what is wrong" type="text" value="Laptop connected to Wi-Fi but cannot access internet"/>
+<div class="absolute right-3 text-tertiary flex items-center">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Suggested Category Chip (AI Auto-detect) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">psychology</span>
+          AI Categorization
+        </span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">96% confidence</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low p-2.5 rounded-lg">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-md bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">wifi</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Wi-Fi / Network</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Hardware &gt; Connectivity &gt; Wireless</span>
+</div>
+</div>
+<button class="px-2.5 py-1 text-primary hover:bg-surface-container rounded-md font-label-sm text-label-sm transition-colors" type="button">
+          Change
+        </button>
+</div>
+</div>
+<!-- Detailed Description -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="issue-description">
+        Detailed Symptoms <span class="text-error">*</span>
+</label>
+<div class="relative">
+<textarea class="w-full p-space-md rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none resize-none leading-relaxed" id="issue-description" placeholder="Include error codes, steps to reproduce, or affected tools..." rows="4">Since this morning 9:30 AM, my MacBook Pro connects to the Corp-Guest and Corp-Secure SSIDs, but all websites time out. Slack is also disconnected.</textarea>
+</div>
+</div>
+<!-- Office / Location Selector -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface">
+          Current Location <span class="text-error">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-0.5 cursor-pointer">
+<span class="material-symbols-outlined text-[14px]">my_location</span> Auto-detected
+        </span>
+</div>
+<!-- Quick Chips Horizontal Scroll -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-1 scrollbar-none" id="location-chips">
+<button class="location-chip px-3 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm whitespace-nowrap flex items-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">apartment</span>
+          HQ - Floor 3 West
+        </button>
+<button class="location-chip px-3 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm whitespace-nowrap flex items-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+          HQ - Floor 4 East
+        </button>
+<button class="location-chip px-3 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm whitespace-nowrap flex items-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">home</span>
+          Remote / Home
+        </button>
+<button class="location-chip px-3 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm whitespace-nowrap flex items-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">store</span>
+          Branch Office
+        </button>
+</div>
+<!-- Desk Number Precision Helper -->
+<div class="mt-1 flex items-center gap-2 bg-surface-container-low px-3 py-2 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">desk</span>
+<input class="bg-transparent border-0 text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none flex-1" placeholder="Add desk / pillar number (e.g. 4E-112)" type="text"/>
+</div>
+</div>
+<!-- Urgency Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between">
+<span>Impact Level</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Defines response SLA</span>
+</label>
+<div class="grid grid-cols-4 gap-2" id="urgency-selector">
+<button class="urgency-btn py-2.5 px-1 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm font-label-sm text-label-sm flex flex-col items-center gap-1 transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+          Low
+        </button>
+<button class="urgency-btn py-2.5 px-1 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm font-label-sm text-label-sm flex flex-col items-center gap-1 transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+          Medium
+        </button>
+<button class="urgency-btn py-2.5 px-1 rounded-lg bg-error-container text-on-error-container shadow-sm font-label-sm text-label-sm flex flex-col items-center gap-1 transition-all font-semibold" type="button">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+          High
+        </button>
+<button class="urgency-btn py-2.5 px-1 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm font-label-sm text-label-sm flex flex-col items-center gap-1 transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+          Critical
+        </button>
+</div>
+</div>
+<!-- Attachments / Diagnostics Section -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface">Evidence &amp; Logs</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">PNG, JPG, LOG up to 25MB</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Uploaded Screenshot Card -->
+<div class="relative bg-surface-container-lowest rounded-xl p-2 shadow-sm flex flex-col gap-1.5 group">
+<div class="relative h-24 w-full rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Clean software user interface screenshot showing a network browser timeout error dialog on macOS, corporate modern styling with soft blue and slate UI elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNi1vEplxwKBn_WfgFMgr4k33f7akDNucjft6mtLsOeM8l_CA6_SbNSGajPTreBw2_1JodvliwBLcI4-jzTjJlrViEYgQhsVga7yObfThLS34RZA-LTgobtSJ7bHV_oYqeUbLtExh5hh1m2PtNsrz4btNPChnj699XuxfmKaCa8_gMdh3Dw3xMeuIuWMWAAfOGSttEtwYTxKQmUaQ6P6QOWrONQ6azFgGp94-irIwXUDGYJUrmGvik"/>
+<button aria-label="Remove attachment" class="absolute top-1.5 right-1.5 w-6 h-6 rounded-full bg-on-surface/70 text-on-primary flex items-center justify-center hover:bg-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-1">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface truncate">screenshot_wifi_timeout.png</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">482 KB</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-tertiary flex-shrink-0">check</span>
+</div>
+</div>
+<!-- Add Photo / Screenshot Button Area -->
+<button class="h-[142px] rounded-xl bg-surface-container-low hover:bg-surface-container flex flex-col items-center justify-center gap-2 text-on-surface-variant transition-colors p-3" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">add_a_photo</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">+ Add Evidence</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Drop screenshot</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Provisioning & Hardware Meta Badge (Visual Richness / Enterprise Reality) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">laptop_mac</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">MacBook Pro 16" (M2 Max)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Asset Tag: #CORP-MBP-8492</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed">
+        In Warranty
+      </span>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full h-12 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container active:scale-[0.98] transition-all flex items-center justify-center gap-2" id="submit-ticket-btn" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span>Submit IT Case (AI Triage)</span>
+</button>
+<button class="w-full h-11 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+<span>Save as Draft</span>
+</button>
+</div>
+</form>
+<!-- Interactive Feedback Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Interactive chip selection
+      const locationChips = document.querySelectorAll('.location-chip');
+      locationChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          locationChips.forEach(c => {
+            c.classList.remove('bg-primary-container', 'text-on-primary');
+            c.classList.add('bg-surface-container-lowest', 'text-on-surface');
+          });
+          chip.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+          chip.classList.add('bg-primary-container', 'text-on-primary');
+        });
+      });
+
+      // Interactive Urgency selection
+      const urgencyBtns = document.querySelectorAll('.urgency-btn');
+      urgencyBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          urgencyBtns.forEach(b => {
+            b.classList.remove('bg-error-container', 'text-on-error-container', 'font-semibold');
+            b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+          });
+          btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+          btn.classList.add('bg-error-container', 'text-on-error-container', 'font-semibold');
+        });
+      });
+
+      // Micro-interaction on submit
+      const submitBtn = document.getElementById('submit-ticket-btn');
+      if (submitBtn) {
+        submitBtn.addEventListener('click', () => {
+          submitBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[20px] animate-spin">refresh</span>
+            <span>Triaging with IT Bot...</span>
+          `;
+          setTimeout(() => {
+            submitBtn.classList.remove('bg-primary');
+            submitBtn.classList.add('bg-tertiary');
+            submitBtn.innerHTML = `
+              <span class="material-symbols-outlined text-[20px]">check_circle</span>
+              <span>Case #IT-8921 Routed!</span>
+            `;
+          }, 1200);
+        });
+      }
+    });
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-semibold"><div class="flex items-stretch justify-around h-16 px-space-xs"><a class="flex-1 flex flex-col items-center justify-center gap-1 min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-tickets" href="#"><span class="material-symbols-outlined text-[24px]">confirmation_number</span><span class="font-label-sm text-label-sm">My Tickets</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center gap-1 min-h-[44px] transition-colors text-primary font-semibold" data-path="report-issue" href="#"><span class="material-symbols-outlined text-[24px]">add_circle</span><span class="font-label-sm text-label-sm">Report Issue</span></a><a class="flex-1 flex flex-col items-center justify-center gap-1 min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="queue-and-ai-triage" href="#"><span class="material-symbols-outlined text-[24px]">auto_awesome</span><span class="font-label-sm text-label-sm">Queue &amp; AI</span></a><a class="flex-1 flex flex-col items-center justify-center gap-1 min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="insights" href="#"><span class="material-symbols-outlined text-[24px]">monitoring</span><span class="font-label-sm text-label-sm">Insights</span></a></div></nav></body></html>

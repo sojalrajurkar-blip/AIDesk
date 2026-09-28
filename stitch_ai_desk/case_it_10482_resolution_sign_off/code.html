@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-background": "#131b2e", "on-error-container": "#93000a", "surface": "#faf8ff", "primary-fixed": "#dbe1ff", "error": "#ba1a1a", "secondary-fixed-dim": "#d2bbff", "inverse-primary": "#b4c5ff", "surface-variant": "#dae2fd", "on-tertiary": "#ffffff", "on-tertiary-container": "#bdffdc", "on-primary-container": "#eeefff", "secondary-container": "#8a4cfc", "primary": "#004ac6", "on-primary-fixed": "#00174b", "surface-dim": "#d2d9f4", "on-surface": "#131b2e", "surface-container-highest": "#dae2fd", "inverse-surface": "#283044", "on-secondary-fixed-variant": "#5a00c6", "on-primary": "#ffffff", "background": "#faf8ff", "on-secondary-fixed": "#25005a", "surface-container-low": "#f2f3ff", "on-surface-variant": "#434655", "inverse-on-surface": "#eef0ff", "primary-fixed-dim": "#b4c5ff", "surface-tint": "#0053db", "tertiary": "#006243", "outline": "#737686", "tertiary-fixed-dim": "#68dba9", "secondary": "#712ae2", "error-container": "#ffdad6", "primary-container": "#2563eb", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "secondary-fixed": "#eaddff", "surface-container": "#eaedff", "on-secondary-container": "#fffbff", "tertiary-container": "#007d57", "tertiary-fixed": "#85f8c4", "on-primary-fixed-variant": "#003ea8", "on-tertiary-fixed-variant": "#005137", "outline-variant": "#c3c6d7", "surface-bright": "#faf8ff", "surface-container-high": "#e2e7ff", "on-tertiary-fixed": "#002114", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "margin": "1rem", "space-xs": "0.25rem", "margin-sm": "0.75rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter-sm": "0.75rem", "gutter": "1rem", "space-md": "1rem" }, "fontFamily": { "body-md": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], "label-md": ["Inter"], "headline-lg-mobile": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "label-lg": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["30px", { "lineHeight": "38px", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Brand logo. - Primary color: #2563eb
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1WtuNvtuhDv53JvVwYvah1tST8EJcXBTKCDfVTV86bQpBIxdnFq0sVeoyKUyxgILHiwxA6nTd_Ocgi22AxI8v6GZj9sQ590NAPjqGzgU6-Xju4B7NFTz9fvnLPfpsu8UgpvhkxagAIco_EhuCqrrIdRS4X4dFqSpbpBvR4cVQGjNPkd8PFTlD8SZh7jlK-JG0MOqZJEf-RsFj8WBN4mdR1NdeOEryUG0p4oZpNm9A1UUoagnzZVv6PpQwA"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Resolution Sign Off</h1><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm tracking-wide shrink-0">IT-10482</span></div></div></div><div class="flex items-center shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VfKuf5hm-0gozSoi8DaotWAzr9cEK4WMt9XWtk7O4nTMms4LDNpFXA1kYpqrVAl3kXR0e9nSwIoFayq-XX75_G6uNYrXl-W6DObI3-2ryVF1DQHBZYwL1JTa3fGpNJMwZK-Jl4Ov2Adho5cY8dlwsRJaM_V9HdpKlPYTztIiHSFAXA3lsXg8CO77iJaXiaeYTHHxzxJlvlNmn9Q586C7TjeEjWj4MEcxBF5R4VdaXS8J2Vl9lzl1cEo7M"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full px-margin pb-space-xl space-y-space-md">
+<!-- Status Header Bento Card -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col space-y-space-sm relative overflow-hidden">
+<div class="absolute -right-6 -top-6 w-24 h-24 bg-secondary-fixed/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant">Requester</span>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Alex Morgan
+        </span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+        Resolution Proposed
+      </div>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Laptop connected to Wi-Fi but cannot access internet</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Reported at 09:14 AM • Fleet ID: MAC-LBN-9921</p>
+</div>
+<!-- Diagnostic Meta Bar -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs bg-surface-container-low rounded-lg p-2.5">
+<img class="w-8 h-8 rounded-full object-cover shrink-0 shadow-sm" data-alt="Corporate headshot of Marcus Vance, a professional male Tier 2 network engineer with glasses and dark navy company polo shirt, warm studio lighting with blue hue, realistic modern enterprise profile photo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKLxx3yKH0rDQs2i7sk-P-vzNimQny3wgIRA4rUfw8qpIxlhSiEiOMaEvkgbDYHZ0iL3Uk1exEQsofA1pMXCPGzsYn7u-56o9B34DPyt482tfbfdlDS-6bZgI5qh_237P6QQ9ai04xEh3O8fyfX4H2dMggxSBNw14tnA5g8aERH106bJysRunPBdfQGAXX6WFdHN59_oroNXqNeCXWRhhpECAfnaf2_sdagMVU6072-nBZPX5qdLz3"/>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Assigned Specialist</p>
+<p class="font-label-md text-label-md text-on-surface truncate font-medium">Marcus Vance</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-tertiary-container/10 rounded-lg p-2.5">
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-tertiary text-[18px]">timer</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-tertiary truncate font-medium">Resolution Time</p>
+<p class="font-label-md text-label-md text-on-surface truncate font-semibold">48m <span class="font-body-sm text-body-sm font-normal text-tertiary">(SLA Met)</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Verification Confidence Banner (SRS FR-AI-011) -->
+<div class="rounded-xl bg-gradient-to-r from-secondary-fixed/40 via-surface-container-low to-surface-container-lowest p-space-sm shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-lg bg-secondary flex items-center justify-center text-on-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">neurology</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-bold text-secondary uppercase tracking-wider">AI Automated Triage</span>
+<span class="inline-flex items-center px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px]">FR-AI-011</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface truncate">Telemetry indicates normal gateway egress.</p>
+</div>
+</div>
+<span class="shrink-0 inline-flex items-center px-2 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+      99% Verified Fix
+    </span>
+</div>
+<!-- Operator Resolution Report Card (FR-RES-001) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">assignment_turned_in</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Operator Resolution Report</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">FR-RES-001</span>
+</div>
+<!-- Remediation Detail Blocks -->
+<div class="space-y-space-sm">
+<div class="bg-surface-container-low rounded-lg p-space-sm space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">build_circle</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider">Remediation Executed</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+          Re-provisioned DHCP Lease on <span class="font-semibold text-primary">VLAN 40</span> &amp; flapped AP-04 North sector radio. Updated secondary DNS to <span class="font-mono text-body-sm bg-surface-container px-1 rounded">10.14.0.10</span> fallback.
+        </p>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">manage_search</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider">Root Cause Analysis</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+          Stale gateway lease pointing to deprecated DNS server <code class="font-mono text-body-sm bg-surface-container px-1 rounded text-error">10.14.0.2</code> following overnight automated subnet migration.
+        </p>
+</div>
+</div>
+<!-- Verification Evidence Card & Ping Visualizer -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Verification Telemetry Evidence</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span> Validated
+        </span>
+</div>
+<div class="bg-surface-container rounded-lg p-space-sm space-y-space-sm overflow-hidden">
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">internal.corp.net</span>
+<span class="text-tertiary font-bold text-label-sm">• 0% Loss</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Round-trip: min 21ms | avg 24ms | max 27ms</p>
+</div>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface font-mono font-label-sm text-label-sm shadow-sm">
+            4/4 Packets
+          </span>
+</div>
+<!-- Ping Wave Sparkline Visualizer -->
+<div class="w-full h-8 bg-surface-container-lowest rounded flex items-end px-2 py-1 gap-1.5">
+<div class="w-1/6 bg-tertiary-fixed-dim rounded-t h-[65%]"></div>
+<div class="w-1/6 bg-tertiary-container rounded-t h-[78%]"></div>
+<div class="w-1/6 bg-tertiary rounded-t h-[70%]"></div>
+<div class="w-1/6 bg-tertiary rounded-t h-[72%]"></div>
+<div class="w-1/6 bg-tertiary-container rounded-t h-[68%]"></div>
+<div class="w-1/6 bg-tertiary-fixed-dim rounded-t h-[74%]"></div>
+</div>
+<!-- Proof Screenshot Thumbnail with modal trigger -->
+<button class="w-full flex items-center justify-between p-2 rounded bg-surface-container-lowest text-left active:bg-surface-container-high transition-colors" onclick="document.getElementById('evidence-modal').classList.remove('hidden')" type="button">
+<div class="flex items-center gap-2 min-w-0">
+<img class="w-10 h-10 rounded object-cover shrink-0 shadow-sm" data-alt="High contrast screenshot of a Linux terminal terminal output showing successful ICMP ping responses to internal.corp.net with zero packet loss, timestamped and cryptographically signed for corporate audit, cool dark palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM3SPbV5sNYqthuOY5rsVG0TYzjuQesJc23cyTxIIEGwLTLQDHVq7OwNBLbJ-T8u4sPYVVzy7XH13ujbABH0F1HcdntFwVtJgkE9EmBrUhkn03kvxqaDm0pC3_Cp305IeJRl3zHqD2ASip8IeinnDS2lGUNYi5zD_rWeLsA__qtwrTZoBtFR3tY49p3sMV_CrGUe540IohozCeQoYS0gbTSCj65kHCcUxh7XP2RwmAS_GZeRWwRD3L"/>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-medium text-on-surface truncate">ping_diag_evidence_AP04.png</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">348 KB • Authenticated by NetOps Agent</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">zoom_in</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Modal for full proof viewing -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-center justify-center p-4" id="evidence-modal">
+<div class="bg-surface-container-lowest rounded-xl p-space-md w-full max-w-sm shadow-xl space-y-space-sm">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Telemetry Evidence</h4>
+<button class="p-1 rounded-full text-on-surface-variant hover:bg-surface-container" onclick="document.getElementById('evidence-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<img class="w-full h-48 rounded-lg object-cover" data-alt="Enlarged detailed corporate terminal telemetry output confirming gateway route restoration, 0 percent packet loss, and active DNS resolution for client workstation MAC-LBN-9921 with blue and emerald highlighted code lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2Cqachf51FuN6AQKLB2xsrNdGPAo5RNtMZZrjCnUu_VmuXCCQEseoYQ30k_tv-fl_Hm-S2td0jk-TgKUzMTGybqPs-6PGrKunzn1s2WMyy9oCtKVqYTsAvcmSVTWsw-KIKqMD5yVHgsYKFZzn5tB-dc8q2bZeoBDQ0fenLhVsce_S4xXGYEhso7CteMcPel0KF1vF5JAX0Rzzx2B_5NmOBWjv40cB1ueDqcVjcFqncWl2xiDlVAay"/>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cryptographic Hash: SHA256-9a4f210d-ping-verified</p>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg" onclick="document.getElementById('evidence-modal').classList.add('hidden')" type="button">
+        Dismiss Viewer
+      </button>
+</div>
+</div>
+<!-- Interactive Requester Quick-Verification Guide (Step 16-17) -->
+<div class="rounded-xl bg-surface-container-low shadow-sm p-space-md space-y-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary text-[14px]">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Please test before confirming:</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Performing these two steps ensures network credentials refresh properly across local AP handshakes.</p>
+<!-- Checklist interactive items -->
+<div class="space-y-space-xs pt-space-xs">
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest shadow-sm cursor-pointer select-none">
+<input class="mt-0.5 rounded text-primary focus:ring-0 w-4 h-4" id="check-step-1" onchange="updateVerificationState()" type="checkbox"/>
+<div class="min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Step 1: Wi-Fi Cycle</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Disconnect and reconnect to <strong>Corp-Secure-Net</strong> Wi-Fi.</p>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest shadow-sm cursor-pointer select-none">
+<input class="mt-0.5 rounded text-primary focus:ring-0 w-4 h-4" id="check-step-2" onchange="updateVerificationState()" type="checkbox"/>
+<div class="min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Step 2: Service Access</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Open browser and verify access to internal portals or Slack messages.</p>
+</div>
+</label>
+</div>
+<div class="hidden items-center gap-1.5 pt-1 text-tertiary font-label-sm text-label-sm font-medium" id="verified-helper-msg">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+      Both verification checks completed. Ready to sign off!
+    </div>
+</div>
+<!-- Collapsible Feedback Note Input -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md space-y-space-sm">
+<button class="w-full flex items-center justify-between text-left text-on-surface" onclick="toggleFeedbackCollapse()" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">rate_review</span>
+<span class="font-label-lg text-label-lg font-medium">Add Feedback for IT Ops</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] transition-transform duration-200" id="feedback-chevron">expand_more</span>
+</button>
+<div class="hidden space-y-space-sm pt-space-xs" id="feedback-container">
+<div class="flex items-center justify-center gap-2 py-1">
+<button class="star-btn text-outline-variant hover:text-secondary focus:outline-none" onclick="selectRating(1)" type="button"><span class="material-symbols-outlined text-[28px]">star</span></button>
+<button class="star-btn text-outline-variant hover:text-secondary focus:outline-none" onclick="selectRating(2)" type="button"><span class="material-symbols-outlined text-[28px]">star</span></button>
+<button class="star-btn text-outline-variant hover:text-secondary focus:outline-none" onclick="selectRating(3)" type="button"><span class="material-symbols-outlined text-[28px]">star</span></button>
+<button class="star-btn text-outline-variant hover:text-secondary focus:outline-none" onclick="selectRating(4)" type="button"><span class="material-symbols-outlined text-[28px]">star</span></button>
+<button class="star-btn text-secondary focus:outline-none" onclick="selectRating(5)" type="button"><span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+</div>
+<textarea class="w-full bg-surface-container-low rounded-lg p-space-sm font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-highest transition-colors" id="feedback-text" placeholder="Optional comments or feedback for IT Operations team..." rows="3"></textarea>
+</div>
+</div>
+<!-- Explicit Human Decision Actions (PRD §10, SRS FR-RES-002, FR-RES-003, FR-RES-004) -->
+<div class="space-y-space-sm pt-space-xs">
+<!-- Primary Sign-off Button -->
+<button class="w-full bg-primary active:bg-primary-container text-on-primary rounded-lg p-space-md flex flex-col items-center justify-center shadow-md active:scale-[0.99] transition-all" id="confirm-resolution-btn" onclick="handleResolutionConfirm()" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] font-bold">task_alt</span>
+<span class="font-label-lg text-label-lg font-bold">Confirm Resolution &amp; Close Case</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-primary/80 mt-0.5">Issues solved, rate service &amp; archive ticket</span>
+</button>
+<!-- Secondary Destructive Reopen Action -->
+<button class="w-full bg-error-container text-on-error-container active:bg-error/20 rounded-lg p-space-md flex flex-col items-center justify-center shadow-sm active:scale-[0.99] transition-all" onclick="triggerReopenDialog()" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] font-bold">report_problem</span>
+<span class="font-label-lg text-label-lg font-bold">Problem Persists — Reopen Ticket</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-error-container/80 mt-0.5 text-center">
+        Triggers immediate priority escalation back to Marcus Vance
+      </span>
+</button>
+</div>
+<!-- Reopen Confirmation Drawer Modal -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-end justify-center p-0" id="reopen-modal">
+<div class="bg-surface-container-lowest rounded-t-2xl p-space-lg w-full max-w-md shadow-2xl space-y-space-md">
+<div class="flex items-center gap-space-sm text-error">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[24px]">assignment_late</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Escalate &amp; Reopen</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SRS FR-RES-003 Audit Tagging</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+        Case <strong>IT-10482</strong> will immediately be re-assigned to <strong>Marcus Vance</strong> at Priority Level 1 (Escalated). An operational reopen incident flag will be logged to fleet analytics.
+      </p>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Explain what still isn't working:</label>
+<textarea class="w-full bg-surface-container-low rounded-lg p-2.5 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" id="reopen-reason" placeholder="e.g. Wi-Fi connected but DNS lookup error still appears on chrome..." rows="2"></textarea>
+</div>
+<div class="space-y-space-xs pt-space-xs">
+<button class="w-full bg-error text-on-error py-3 rounded-lg font-label-lg text-label-lg font-semibold shadow-sm" onclick="confirmReopenAction()" type="button">
+          Confirm Escalation &amp; Reopen
+        </button>
+<button class="w-full bg-surface-container py-3 rounded-lg font-label-lg text-label-lg text-on-surface" onclick="closeReopenDialog()" type="button">
+          Nevermind, Cancel
+        </button>
+</div>
+</div>
+</div>
+<!-- Resolution Confirmation Success State Toast -->
+<div class="hidden fixed bottom-6 inset-x-margin max-w-sm mx-auto z-50 bg-inverse-surface text-inverse-on-surface rounded-xl p-space-md shadow-2xl flex items-center gap-space-sm" id="success-notification">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">done_all</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-inverse-on-surface">Case IT-10482 Closed</p>
+<p class="font-body-sm text-body-sm text-inverse-on-surface/80 truncate">Thank you, Alex. Service record updated.</p>
+</div>
+</div>
+</div>
+<script>
+  function updateVerificationState() {
+    const step1 = document.getElementById('check-step-1').checked;
+    const step2 = document.getElementById('check-step-2').checked;
+    const helperMsg = document.getElementById('verified-helper-msg');
+    const confirmBtn = document.getElementById('confirm-resolution-btn');
+
+    if (step1 && step2) {
+      helperMsg.classList.remove('hidden');
+      helperMsg.classList.add('flex');
+      confirmBtn.classList.remove('bg-primary');
+      confirmBtn.classList.add('bg-tertiary-container');
+    } else {
+      helperMsg.classList.add('hidden');
+      helperMsg.classList.remove('flex');
+      confirmBtn.classList.remove('bg-tertiary-container');
+      confirmBtn.classList.add('bg-primary');
+    }
+  }
+
+  function toggleFeedbackCollapse() {
+    const container = document.getElementById('feedback-container');
+    const chevron = document.getElementById('feedback-chevron');
+    const isHidden = container.classList.contains('hidden');
+
+    if (isHidden) {
+      container.classList.remove('hidden');
+      chevron.classList.add('rotate-180');
+    } else {
+      container.classList.add('hidden');
+      chevron.classList.remove('rotate-180');
+    }
+  }
+
+  function selectRating(stars) {
+    const buttons = document.querySelectorAll('.star-btn');
+    buttons.forEach((btn, idx) => {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (idx < stars) {
+        btn.classList.add('text-secondary');
+        btn.classList.remove('text-outline-variant');
+        icon.style.fontVariationSettings = "'FILL' 1";
+      } else {
+        btn.classList.remove('text-secondary');
+        btn.classList.add('text-outline-variant');
+        icon.style.fontVariationSettings = "'FILL' 0";
+      }
+    });
+  }
+
+  function handleResolutionConfirm() {
+    const successToast = document.getElementById('success-notification');
+    successToast.classList.remove('hidden');
+    setTimeout(() => {
+      if (window.history && window.history.length > 1) {
+        window.history.back();
+      }
+    }, 1800);
+  }
+
+  function triggerReopenDialog() {
+    document.getElementById('reopen-modal').classList.remove('hidden');
+  }
+
+  function closeReopenDialog() {
+    document.getElementById('reopen-modal').classList.add('hidden');
+  }
+
+  function confirmReopenAction() {
+    closeReopenDialog();
+    const successToast = document.getElementById('success-notification');
+    const toastTitle = successToast.querySelector('p.font-label-md');
+    const toastSub = successToast.querySelector('p.font-body-sm');
+    toastTitle.textContent = "Ticket Reopened (P1 Escalated)";
+    toastSub.textContent = "Marcus Vance notified for re-triage.";
+    successToast.classList.remove('hidden');
+    setTimeout(() => {
+      if (window.history && window.history.length > 1) {
+        window.history.back();
+      }
+    }, 1800);
+  }
+</script></main></body></html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#131b2e","on-error-container":"#93000a","surface":"#faf8ff","primary-fixed":"#dbe1ff","error":"#ba1a1a","secondary-fixed-dim":"#d2bbff","inverse-primary":"#b4c5ff","surface-variant":"#dae2fd","on-tertiary":"#ffffff","on-tertiary-container":"#bdffdc","on-primary-container":"#eeefff","secondary-container":"#8a4cfc","primary":"#004ac6","on-primary-fixed":"#00174b","surface-dim":"#d2d9f4","on-surface":"#131b2e","surface-container-highest":"#dae2fd","inverse-surface":"#283044","on-secondary-fixed-variant":"#5a00c6","on-primary":"#ffffff","background":"#faf8ff","on-secondary-fixed":"#25005a","surface-container-low":"#f2f3ff","on-surface-variant":"#434655","inverse-on-surface":"#eef0ff","primary-fixed-dim":"#b4c5ff","surface-tint":"#0053db","tertiary":"#006243","outline":"#737686","tertiary-fixed-dim":"#68dba9","secondary":"#712ae2","error-container":"#ffdad6","primary-container":"#2563eb","surface-container-lowest":"#ffffff","on-error":"#ffffff","secondary-fixed":"#eaddff","surface-container":"#eaedff","on-secondary-container":"#fffbff","tertiary-container":"#007d57","tertiary-fixed":"#85f8c4","on-primary-fixed-variant":"#003ea8","on-tertiary-fixed-variant":"#005137","outline-variant":"#c3c6d7","surface-bright":"#faf8ff","surface-container-high":"#e2e7ff","on-tertiary-fixed":"#002114","on-secondary":"#ffffff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2rem","margin":"1rem","space-xs":"0.25rem","margin-sm":"0.75rem","space-sm":"0.5rem","space-lg":"1.5rem","gutter-sm":"0.75rem","gutter":"1rem","space-md":"1rem"},fontFamily:{"body-md":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],"label-md":["Inter"],"headline-lg-mobile":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"label-lg":["Inter"],"body-sm":["Inter"]},fontSize:{"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-lg":["30px",{lineHeight:"38px",fontWeight:"700"}],"headline-md":["20px",{lineHeight:"28px",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg-mobile":["24px",{lineHeight:"32px",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-md"><img alt="Brand logo. - Primary color: #2563eb
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WtuNvtuhDv53JvVwYvah1tST8EJcXBTKCDfVTV86bQpBIxdnFq0sVeoyKUyxgILHiwxA6nTd_Ocgi22AxI8v6GZj9sQ590NAPjqGzgU6-Xju4B7NFTz9fvnLPfpsu8UgpvhkxagAIco_EhuCqrrIdRS4X4dFqSpbpBvR4cVQGjNPkd8PFTlD8SZh7jlK-JG0MOqZJEf-RsFj8WBN4mdR1NdeOEryUG0p4oZpNm9A1UUoagnzZVv6PpQwA"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">ServiceCore</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">IT Operations</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-lg">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="queue-&-triage" href="#"><span class="material-symbols-outlined text-lg">inbox</span><span>Queue & Triage</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="active-cases" href="#"><span class="material-symbols-outlined text-lg">confirmation_number</span><span>Active Cases</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="team-&-workload" href="#"><span class="material-symbols-outlined text-lg">group</span><span>Team & Workload</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="operational-insights" href="#"><span class="material-symbols-outlined text-lg">monitoring</span><span>Operational Insights</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="admin-&-policy" href="#"><span class="material-symbols-outlined text-lg">policy</span><span>Admin & Policy</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-label-lg rounded-lg" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-lg">receipt_long</span><span>Audit Logs</span></a></nav></div><div class="px-space-md"><div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant">SLA Engine</span><span class="font-body-sm text-body-sm text-on-surface font-semibold">v4.2.1 • Latency 14ms</span></div><span class="material-symbols-outlined text-tertiary text-lg">speed</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md flex-1 max-w-lg"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-lg pointer-events-none">search</span><input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" placeholder="Search cases, assets, personnel, knowledge base..." type="search"/></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-full"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface">Systems Operational</span></div><button class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full"></span></button><div class="h-6 w-px bg-surface-variant"></div><div class="flex items-center gap-space-sm"><div class="relative"><select aria-label="Active Role Switcher" class="appearance-none bg-surface-container text-on-surface font-label-md text-label-md py-1.5 pl-space-sm pr-7 rounded-lg cursor-pointer focus:outline-none hover:bg-surface-container-high transition-colors"><option value="manager">Role: Manager</option><option value="admin">Role: Admin</option></select><span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-base">expand_more</span></div><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VfKuf5hm-0gozSoi8DaotWAzr9cEK4WMt9XWtk7O4nTMms4LDNpFXA1kYpqrVAl3kXR0e9nSwIoFayq-XX75_G6uNYrXl-W6DObI3-2ryVF1DQHBZYwL1JTa3fGpNJMwZK-Jl4Ov2Adho5cY8dlwsRJaM_V9HdpKlPYTztIiHSFAXA3lsXg8CO77iJaXiaeYTHHxzxJlvlNmn9Q586C7TjeEjWj4MEcxBF5R4VdaXS8J2Vl9lzl1cEo7M"/><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-none">Alex Rivera</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-0.5">alex.r@enterprise.it</span></div></div></div></div></header><main class="relative w-full pt-16 bg-surface px-space-xl pb-space-xl"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg w-full">
+<!-- Header & Governance Summary (PRD §3, SRS FR-DASH-005) -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded text-label-sm font-label-sm uppercase tracking-wider bg-surface-container-high text-on-surface-variant font-semibold">Governance & Controls</span>
+<span class="flex items-center gap-1 text-label-sm font-label-sm text-tertiary font-semibold bg-tertiary/10 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            Ledger Active (SHA-256 Validated)
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">System Administration, RBAC & Audit History</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Manage RBAC permissions, SLA policies, and inspect immutable system audit logs in compliance with PRD §3, §7.10, §11, §28, and SRS FR-AUDIT-001–004.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-center">
+<button class="h-10 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-lg text-label-lg flex items-center gap-space-xs transition-colors shadow-sm" id="verifyLedgerBtn" type="button">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+<span>Verify Integrity</span>
+</button>
+<button class="h-10 px-space-md rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg flex items-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+<span>Export Signed Audit Log</span>
+</button>
+</div>
+</div>
+<!-- Quick Stats Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Roles</span>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-1">5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Enforcing zero-trust matrix</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">admin_panel_settings</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Managed Teams</span>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-1">4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Hardware, Network, Identity, Cloud</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">groups</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SLA Tiers</span>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-1">8</span>
+<span class="font-body-sm text-body-sm text-tertiary mt-0.5 font-semibold">99.8% compliance rate</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-2xl">timer</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Audit Records</span>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-1">1,429</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Tamper-evident append chain</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-2xl">token</span>
+</div>
+</div>
+</div>
+<!-- Configuration Grids (RBAC Matrix & SLA Policy Engine) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- RBAC Permissions Matrix Card (FR-AUTH-005, FR-AUTH-006) -->
+<div class="xl:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">Role-Based Access Control (RBAC)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Granular authorization boundaries enforced at API gateway and operational telemetry layer.</p>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary/10 px-2 py-1 rounded-full font-semibold">Synchronized with IdP</span>
+</div>
+<!-- Permissions Table Preview -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<th class="py-2.5 px-3 rounded-l-lg">Permission / Scope</th>
+<th class="py-2.5 px-2 text-center">REQUESTER</th>
+<th class="py-2.5 px-2 text-center">OPERATOR</th>
+<th class="py-2.5 px-2 text-center">TEAM_LEAD</th>
+<th class="py-2.5 px-2 text-center">MANAGER</th>
+<th class="py-2.5 px-2 text-center rounded-r-lg">ADMIN</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y-0">
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3 px-3 font-semibold text-on-surface">
+                  Create / View Own Incidents
+                  <span class="block font-normal text-label-sm text-on-surface-variant">Self-service submission via portal</span>
+</td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3 px-3 font-semibold text-on-surface">
+                  Triage & Accept AI Routing
+                  <span class="block font-normal text-label-sm text-on-surface-variant">Queue processing and re-assignment</span>
+</td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-outline text-lg">do_not_disturb_on</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3 px-3 font-semibold text-on-surface">
+                  Override AI Recommendation
+                  <span class="block font-normal text-label-sm text-on-surface-variant">Manually bypass DeskAI scoring</span>
+</td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-outline text-lg">do_not_disturb_on</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-outline text-lg">do_not_disturb_on</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3 px-3 font-semibold text-on-surface">
+                  Modify SLA & Global Thresholds
+                  <span class="block font-normal text-label-sm text-on-surface-variant">System-level clock and escalation tuning</span>
+</td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-outline text-lg">do_not_disturb_on</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-outline text-lg">do_not_disturb_on</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-outline text-lg">do_not_disturb_on</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-tertiary text-lg">check_circle</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3 px-3 font-semibold text-on-surface">
+                  Immutable Audit Ledger Purge
+                  <span class="block font-normal text-label-sm text-on-surface-variant">Strictly forbidden by protocol (§28)</span>
+</td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-error text-lg">block</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-error text-lg">block</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-error text-lg">block</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-error text-lg">block</span></td>
+<td class="py-3 px-2 text-center"><span class="material-symbols-outlined text-error text-lg">block</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-transparent bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base">info</span>
+<span>Ledger modifications are cryptographically sealed and disallow hard deletions.</span>
+</div>
+<button class="text-primary hover:text-on-primary-fixed-variant font-label-md text-label-md font-semibold" type="button">Edit Matrix Rules</button>
+</div>
+</div>
+<!-- SLA Engine & Policy Configuration (PRD §7.10, AGENTS.md §19) -->
+<div class="xl:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">SLA Policy Engine</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Default operational targets & escalation clocks</p>
+</div>
+<span class="material-symbols-outlined text-primary-container">tune</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- P1 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold bg-error/10 text-error">P1 Critical</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Outage / Severe Impact</span>
+</div>
+<div class="flex items-center gap-space-md text-right font-body-sm text-body-sm">
+<div>
+<span class="block text-label-sm text-on-surface-variant">Resp: <strong>1h</strong></span>
+<span class="block text-label-sm text-on-surface-variant">Res: <strong>4h</strong></span>
+</div>
+<span class="material-symbols-outlined text-base text-tertiary">bolt</span>
+</div>
+</div>
+<!-- P2 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold bg-secondary-container/10 text-secondary">P2 High</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Degraded Performance</span>
+</div>
+<div class="flex items-center gap-space-md text-right font-body-sm text-body-sm">
+<div>
+<span class="block text-label-sm text-on-surface-variant">Resp: <strong>2h</strong></span>
+<span class="block text-label-sm text-on-surface-variant">Res: <strong>8h</strong></span>
+</div>
+<span class="material-symbols-outlined text-base text-outline">schedule</span>
+</div>
+</div>
+<!-- P3 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold bg-primary/10 text-primary">P3 Medium</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Single User / Workaround</span>
+</div>
+<div class="flex items-center gap-space-md text-right font-body-sm text-body-sm">
+<div>
+<span class="block text-label-sm text-on-surface-variant">Resp: <strong>4h</strong></span>
+<span class="block text-label-sm text-on-surface-variant">Res: <strong>24h</strong></span>
+</div>
+<span class="material-symbols-outlined text-base text-outline">schedule</span>
+</div>
+</div>
+<!-- P4 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold bg-surface-variant text-on-surface-variant">P4 Low</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Inquiry / Enhancement</span>
+</div>
+<div class="flex items-center gap-space-md text-right font-body-sm text-body-sm">
+<div>
+<span class="block text-label-sm text-on-surface-variant">Resp: <strong>8h</strong></span>
+<span class="block text-label-sm text-on-surface-variant">Res: <strong>48h</strong></span>
+</div>
+<span class="material-symbols-outlined text-base text-outline">schedule</span>
+</div>
+</div>
+</div>
+<!-- Automated Safety Guard Toggle (AGENTS.md §10, §27) -->
+<div class="p-space-sm bg-secondary-fixed/30 rounded-lg flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-xl">auto_fix_high</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Human Confirmation Mandate</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Require human sign-off for AI routing above 90% confidence score.</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border-0 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Immutable Audit Trail Inspector (SRS FR-AUDIT-001–004, AGENTS.md §27) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface">Immutable Audit Trail Inspector</h2>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm font-semibold bg-tertiary/10 text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              Tamper-Evident Ledger
+            </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">All modifications, triage overrides, and SLA state transitions are permanently chained.</span>
+</div>
+<div class="flex items-center gap-space-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-tertiary">lock</span>
+<span>Ledger Hash: 0x82f4...d901b</span>
+</div>
+</div>
+<!-- Filter Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<!-- Search Case ID -->
+<div class="lg:col-span-4 relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-base pointer-events-none">search</span>
+<input class="w-full h-10 pl-9 pr-space-sm bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="caseSearchInput" placeholder="Search Case ID (e.g., IT-10482)..." type="text"/>
+</div>
+<!-- Actor Filter -->
+<div class="lg:col-span-3 relative flex items-center">
+<select aria-label="Filter by Actor" class="appearance-none w-full h-10 pl-3 pr-8 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="actorFilter">
+<option value="ALL">All Actors (Human & AI)</option>
+<option value="Marcus Vance">Marcus Vance (Operator)</option>
+<option value="DeskAI">DeskAI Triage Engine</option>
+<option value="Sarah Jenkins">Sarah Jenkins (Requester)</option>
+<option value="David Miller">David Miller (Lead)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-base">expand_more</span>
+</div>
+<!-- Event Type Filter -->
+<div class="lg:col-span-3 relative flex items-center">
+<select aria-label="Filter by Event Type" class="appearance-none w-full h-10 pl-3 pr-8 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="eventFilter">
+<option value="ALL">All Event Types</option>
+<option value="AI Recommendation Accepted">AI Recommendation Accepted</option>
+<option value="Cluster Anomaly Flagged">Cluster Anomaly Flagged</option>
+<option value="Resolution Rejected / Reopened">Resolution Rejected / Reopened</option>
+<option value="Manual Assignment Override">Manual Assignment Override</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-base">expand_more</span>
+</div>
+<!-- Reset Button -->
+<div class="lg:col-span-2 flex items-center">
+<button class="w-full h-10 bg-surface-container-lowest hover:bg-surface-variant text-on-surface font-label-md text-label-md rounded-lg flex items-center justify-center gap-1 transition-colors shadow-sm" id="resetFiltersBtn" type="button">
+<span class="material-symbols-outlined text-base">filter_alt_off</span>
+<span>Reset</span>
+</button>
+</div>
+</div>
+<!-- Audit Log Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="auditTable">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<th class="py-3 px-4 rounded-l-lg">Timestamp</th>
+<th class="py-3 px-3">Actor & Credential</th>
+<th class="py-3 px-3">Action / Event</th>
+<th class="py-3 px-3">Target Entity</th>
+<th class="py-3 px-3">Operational Delta & Context</th>
+<th class="py-3 px-4 rounded-r-lg">Cryptographic Hash</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y-0" id="auditLogRows">
+<!-- Record 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors border-b-0 audit-row" data-actor="Marcus Vance" data-case="IT-10482" data-event="AI Recommendation Accepted">
+<td class="py-3.5 px-4 font-semibold text-on-surface whitespace-nowrap">
+                Today 10:22 AM
+                <span class="block font-normal text-label-sm text-on-surface-variant">Seq #109482-A</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-sm text-label-sm font-semibold">MV</span>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface leading-tight">Marcus Vance</span>
+<span class="text-label-sm text-on-surface-variant">Operator • Tier 2</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm font-semibold bg-tertiary/10 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  AI Recommendation Accepted
+                </span>
+</td>
+<td class="py-3.5 px-3 font-semibold text-primary">Case IT-10482</td>
+<td class="py-3.5 px-3 text-on-surface-variant">
+<div class="flex flex-col text-body-sm">
+<span><strong>Prev:</strong> Unassigned / Auto-Categorized Network</span>
+<span><strong>New:</strong> Assigned Marcus Vance / Network L2</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex items-center gap-1 font-mono text-label-sm text-on-surface-variant bg-surface-container-low px-2 py-1 rounded">
+<span class="material-symbols-outlined text-sm text-tertiary">fingerprint</span>
+<span>SHA256: 8f9b...a104</span>
+</div>
+</td>
+</tr>
+<!-- Record 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors border-b-0 audit-row" data-actor="DeskAI" data-case="IT-10491" data-event="Cluster Anomaly Flagged">
+<td class="py-3.5 px-4 font-semibold text-on-surface whitespace-nowrap">
+                Today 10:18 AM
+                <span class="block font-normal text-label-sm text-on-surface-variant">Seq #109481-C</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-secondary-container/10 text-secondary flex items-center justify-center font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">smart_toy</span>
+</span>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface leading-tight">DeskAI Triage Engine</span>
+<span class="text-label-sm text-secondary">Autonomous Model v4.2</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm font-semibold bg-secondary-container/10 text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Cluster Anomaly Flagged
+                </span>
+</td>
+<td class="py-3.5 px-3 font-semibold text-primary">Case IT-10491</td>
+<td class="py-3.5 px-3 text-on-surface-variant">
+<div class="flex flex-col text-body-sm">
+<span>Linked as child of <strong>IT-10482</strong> with <strong>84% similarity</strong> score</span>
+<span class="text-label-sm text-on-surface-variant font-mono">Cluster: Switch-Rack-Floor4-Fail</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex items-center gap-1 font-mono text-label-sm text-on-surface-variant bg-surface-container-low px-2 py-1 rounded">
+<span class="material-symbols-outlined text-sm text-tertiary">fingerprint</span>
+<span>SHA256: 41ae...e991</span>
+</div>
+</td>
+</tr>
+<!-- Record 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors border-b-0 audit-row" data-actor="Sarah Jenkins" data-case="IT-10470" data-event="Resolution Rejected / Reopened">
+<td class="py-3.5 px-4 font-semibold text-on-surface whitespace-nowrap">
+                Today 09:42 AM
+                <span class="block font-normal text-label-sm text-on-surface-variant">Seq #109480-R</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-surface-variant text-on-surface flex items-center justify-center font-label-sm text-label-sm font-semibold">SJ</span>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface leading-tight">Sarah Jenkins</span>
+<span class="text-label-sm text-on-surface-variant">Requester • Sales Dept</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm font-semibold bg-error/10 text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Resolution Rejected / Reopened
+                </span>
+</td>
+<td class="py-3.5 px-3 font-semibold text-primary">Case IT-10470</td>
+<td class="py-3.5 px-3 text-on-surface-variant">
+<div class="flex flex-col text-body-sm">
+<span>VPN still drops on reconnect. Priority escalated to <strong>P1</strong></span>
+<span class="text-label-sm text-error font-medium">Reopen Count: 1 • SLA Clock Restarted</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex items-center gap-1 font-mono text-label-sm text-on-surface-variant bg-surface-container-low px-2 py-1 rounded">
+<span class="material-symbols-outlined text-sm text-tertiary">fingerprint</span>
+<span>SHA256: 72bf...d120</span>
+</div>
+</td>
+</tr>
+<!-- Record 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors border-b-0 audit-row" data-actor="David Miller" data-case="IT-10465" data-event="Manual Assignment Override">
+<td class="py-3.5 px-4 font-semibold text-on-surface whitespace-nowrap">
+                Today 09:15 AM
+                <span class="block font-normal text-label-sm text-on-surface-variant">Seq #109479-M</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-sm text-label-sm font-semibold">DM</span>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface leading-tight">David Miller</span>
+<span class="text-label-sm text-on-surface-variant">Team Lead • L3 Escalations</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm font-semibold bg-surface-variant text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant"></span>
+                  Manual Assignment Override
+                </span>
+</td>
+<td class="py-3.5 px-3 font-semibold text-primary">Case IT-10465</td>
+<td class="py-3.5 px-3 text-on-surface-variant">
+<div class="flex flex-col text-body-sm">
+<span>Overrode AI suggestion from <strong>Hardware</strong> to <strong>Identity</strong> team</span>
+<span class="text-label-sm text-on-surface-variant">Reason: Smartcard credential failure, not slot reader defect</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex items-center gap-1 font-mono text-label-sm text-on-surface-variant bg-surface-container-low px-2 py-1 rounded">
+<span class="material-symbols-outlined text-sm text-tertiary">fingerprint</span>
+<span>SHA256: 3c7d...bb88</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Status -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span>Showing <strong>4</strong> of <strong>1,429</strong> records</span>
+<span class="text-outline">•</span>
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">shield</span>
+            Zero Tampering Detected
+          </span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface-variant opacity-50 cursor-not-allowed" type="button">
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center justify-center font-semibold" type="button">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-variant text-on-surface font-label-sm text-label-sm flex items-center justify-center" type="button">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-variant text-on-surface font-label-sm text-label-sm flex items-center justify-center" type="button">3</button>
+<span class="px-1 text-on-surface-variant font-body-sm">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-variant text-on-surface font-label-sm text-label-sm flex items-center justify-center" type="button">143</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-variant text-on-surface-variant flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const caseSearch = document.getElementById('caseSearchInput');
+    const actorFilter = document.getElementById('actorFilter');
+    const eventFilter = document.getElementById('eventFilter');
+    const resetBtn = document.getElementById('resetFiltersBtn');
+    const rows = document.querySelectorAll('.audit-row');
+    const verifyBtn = document.getElementById('verifyLedgerBtn');
+
+    function applyFilters() {
+      const caseVal = (caseSearch.value || '').trim().toUpperCase();
+      const actorVal = actorFilter.value;
+      const eventVal = eventFilter.value;
+
+      rows.forEach(row => {
+        const rowCase = row.getAttribute('data-case').toUpperCase();
+        const rowActor = row.getAttribute('data-actor');
+        const rowEvent = row.getAttribute('data-event');
+
+        const matchesCase = !caseVal || rowCase.includes(caseVal);
+        const matchesActor = (actorVal === 'ALL') || (rowActor === actorVal);
+        const matchesEvent = (eventVal === 'ALL') || (rowEvent === eventVal);
+
+        if (matchesCase && matchesActor && matchesEvent) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    if (caseSearch) caseSearch.addEventListener('input', applyFilters);
+    if (actorFilter) actorFilter.addEventListener('change', applyFilters);
+    if (eventFilter) eventFilter.addEventListener('change', applyFilters);
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (caseSearch) caseSearch.value = '';
+        if (actorFilter) actorFilter.value = 'ALL';
+        if (eventFilter) eventFilter.value = 'ALL';
+        applyFilters();
+      });
+    }
+
+    if (verifyBtn) {
+      verifyBtn.addEventListener('click', () => {
+        const originalContent = verifyBtn.innerHTML;
+        verifyBtn.innerHTML = '<span class="material-symbols-outlined text-lg animate-spin">sync</span><span>Verifying SHA-256...</span>';
+        setTimeout(() => {
+          verifyBtn.innerHTML = '<span class="material-symbols-outlined text-lg text-tertiary">check</span><span>100% Chain Valid</span>';
+          setTimeout(() => {
+            verifyBtn.innerHTML = originalContent;
+          }, 2400);
+        }, 900);
+      });
+    }
+  })();
+</script></main></div></body></html>

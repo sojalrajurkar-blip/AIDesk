@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed":"#85f8c4","error":"#ba1a1a","on-tertiary-fixed-variant":"#005137","secondary-container":"#8a4cfc","on-secondary-fixed":"#25005a","primary-fixed-dim":"#b4c5ff","secondary-fixed-dim":"#d2bbff","inverse-on-surface":"#eef0ff","on-primary-fixed-variant":"#003ea8","surface":"#faf8ff","tertiary-container":"#007d57","on-background":"#131b2e","outline-variant":"#c3c6d7","on-surface":"#131b2e","surface-container":"#eaedff","surface-container-high":"#e2e7ff","primary-fixed":"#dbe1ff","on-secondary-container":"#fffbff","on-tertiary-fixed":"#002114","background":"#faf8ff","error-container":"#ffdad6","primary":"#004ac6","on-primary-container":"#eeefff","surface-container-lowest":"#ffffff","on-tertiary-container":"#bdffdc","on-primary":"#ffffff","primary-container":"#2563eb","secondary-fixed":"#eaddff","inverse-primary":"#b4c5ff","on-error":"#ffffff","inverse-surface":"#283044","tertiary":"#006243","on-tertiary":"#ffffff","on-surface-variant":"#434655","secondary":"#712ae2","on-secondary":"#ffffff","surface-variant":"#dae2fd","surface-dim":"#d2d9f4","surface-bright":"#faf8ff","surface-tint":"#0053db","on-error-container":"#93000a","on-secondary-fixed-variant":"#5a00c6","surface-container-low":"#f2f3ff","tertiary-fixed-dim":"#68dba9","surface-container-highest":"#dae2fd","outline":"#737686","on-primary-fixed":"#00174b"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"1rem","space-lg":"1.5rem","gutter-sm":"0.75rem","margin":"1rem","margin-sm":"0.75rem","gutter":"1rem","space-xs":"0.25rem","space-sm":"0.5rem","space-xl":"2rem"},"fontFamily":{"body-md":["Inter"],"headline-md":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"],"headline-sm":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-lg-mobile":["Inter"]},"fontSize":{"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg":["30px",{"lineHeight":"38px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #2563eb - Font: inter - Mode: light - Roundness: rounded-md" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WtuNvtuhDv53JvVwYvah1tST8EJcXBTKCDfVTV86bQpBIxdnFq0sVeoyKUyxgILHiwxA6nTd_Ocgi22AxI8v6GZj9sQ590NAPjqGzgU6-Xju4B7NFTz9fvnLPfpsu8UgpvhkxagAIco_EhuCqrrIdRS4X4dFqSpbpBvR4cVQGjNPkd8PFTlD8SZh7jlK-JG0MOqZJEf-RsFj8WBN4mdR1NdeOEryUG0p4oZpNm9A1UUoagnzZVv6PpQwA"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">DeskAI</span></div><span class="material-symbols-outlined text-outline cursor-pointer hover:text-on-surface transition-colors text-lg">dock_to_left</span></div><div class="px-space-md py-space-xs"><div class="flex items-center justify-between px-space-sm py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm text-primary">verified_user</span><span class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider">IT Operations</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">Lead</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm mt-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="queue-and-ai-triage" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg">auto_awesome</span><span class="font-label-lg text-label-lg">Queue & AI Triage</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-bold">4</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="active-cases" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg">inbox</span><span class="font-label-lg text-label-lg">Active Cases</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-semibold">12</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="investigation-workspace" href="#"><span class="material-symbols-outlined text-lg">terminal</span><span class="font-label-lg text-label-lg">Investigation Workspace</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="team-and-workload" href="#"><span class="material-symbols-outlined text-lg">group</span><span class="font-label-lg text-label-lg">Team & Workload</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="operational-insights" href="#"><span class="material-symbols-outlined text-lg">query_stats</span><span class="font-label-lg text-label-lg">Operational Insights</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-and-policy" href="#"><span class="material-symbols-outlined text-lg">tune</span><span class="font-label-lg text-label-lg">Admin & Policy</span></a></nav></div><div class="flex flex-col gap-space-sm p-space-md"><div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">FastAPI Backend</span><div class="flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-tertiary-container"></span><span class="font-label-sm text-label-sm text-tertiary font-semibold">Online</span></div></div><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Supabase Cloud</span><div class="flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-tertiary-container"></span><span class="font-label-sm text-label-sm text-tertiary font-semibold">Connected</span></div></div></div><div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VfKuf5hm-0gozSoi8DaotWAzr9cEK4WMt9XWtk7O4nTMms4LDNpFXA1kYpqrVAl3kXR0e9nSwIoFayq-XX75_G6uNYrXl-W6DObI3-2ryVF1DQHBZYwL1JTa3fGpNJMwZK-Jl4Ov2Adho5cY8dlwsRJaM_V9HdpKlPYTztIiHSFAXA3lsXg8CO77iJaXiaeYTHHxzxJlvlNmn9Q586C7TjeEjWj4MEcxBF5R4VdaXS8J2Vl9lzl1cEo7M"/><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Marcus Vance</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Tier 2 Network Specialist</span></div><span class="material-symbols-outlined text-outline text-sm">unfold_more</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-lg pointer-events-none">search</span><input class="w-full h-10 pl-10 pr-16 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md placeholder:text-outline placeholder:font-body-md placeholder:text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all" placeholder="Search cases by ID, requester, AP hostname, or symptom..." type="text"/><kbd class="absolute right-3 px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">Ctrl+K</kbd></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-error-container text-on-error-container"><span class="h-2 w-2 rounded-full bg-error animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold">2 Approaching SLA</span></div><div class="flex items-center gap-space-xs"><button class="flex items-center gap-1.5 h-9 px-space-md rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-base">add</span>Quick Intake</button><button class="flex items-center gap-1.5 h-9 px-space-md rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-highest transition-colors" type="button"><span class="material-symbols-outlined text-base text-secondary">bolt</span>Run Diagnostics</button></div><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center p-0.5 rounded-lg bg-surface-container"><button class="px-space-sm py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-colors" type="button">Requester</button><button class="px-space-sm py-1 rounded-md bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm" type="button">Operator</button></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-error"></span></button></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Case Header & Progress Rail -->
+<section class="bg-surface-container-lowest px-space-lg py-space-md shadow-sm">
+<div class="flex flex-col gap-space-md">
+<!-- Breadcrumb & Top Actions Bar -->
+<div class="flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="hover:text-primary cursor-pointer transition-colors">Cases</span>
+<span class="material-symbols-outlined text-sm text-outline">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Active Queue</span>
+<span class="material-symbols-outlined text-sm text-outline">chevron_right</span>
+<span class="text-on-surface font-semibold bg-surface-container px-2 py-0.5 rounded">IT-10482</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-highest transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">forum</span>
+            Request Info from Requester
+          </button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-high text-error font-label-md text-label-md font-semibold hover:bg-error-container hover:text-on-error-container transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">upgrade</span>
+            Escalate to Tier 3
+          </button>
+<button class="h-9 px-space-md rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:opacity-95 shadow-sm transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">task_alt</span>
+            Propose Resolution
+          </button>
+<button class="h-9 w-9 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Main Case Title & Badges -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight font-bold">
+              IT-10482: Laptop connected to Wi-Fi but cannot access internet
+            </h1>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-error animate-pulse"></span>
+              High Priority
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+              Wi-Fi / WLAN Infra
+            </span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+              Created 48m ago by DeskAI Telemetry Hook
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-error font-semibold">
+<span class="material-symbols-outlined text-sm">timer</span>
+              SLA Countdown: 2h 12m remaining (P2 Standard)
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">person</span>
+              Lead Assignee: <strong class="text-on-surface ml-0.5">Marcus Vance</strong>
+</span>
+</div>
+</div>
+</div>
+<!-- Status Stepper Bar (8 Lifecycle Stages) -->
+<div class="relative pt-2 pb-1">
+<div class="grid grid-cols-8 gap-2">
+<!-- Step 1 Done -->
+<div class="flex flex-col gap-1.5 group cursor-default">
+<div class="h-2 w-full rounded-full bg-tertiary-container transition-all"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">check_circle</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold truncate">1. Reported</span>
+</div>
+</div>
+<!-- Step 2 Done -->
+<div class="flex flex-col gap-1.5 group cursor-default">
+<div class="h-2 w-full rounded-full bg-tertiary-container transition-all"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">check_circle</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold truncate">2. Understood</span>
+</div>
+</div>
+<!-- Step 3 Active Assigned -->
+<div class="flex flex-col gap-1.5 group cursor-default">
+<div class="h-2 w-full rounded-full bg-primary-container ring-2 ring-primary-fixed-dim transition-all"></div>
+<div class="flex items-center gap-1">
+<span class="h-2 w-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary font-bold truncate">3. Assigned (M. Vance)</span>
+</div>
+</div>
+<!-- Step 4 Investigating -->
+<div class="flex flex-col gap-1.5 group cursor-default">
+<div class="h-2 w-full rounded-full bg-surface-container-high transition-all"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-outline">pending</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">4. Investigating</span>
+</div>
+</div>
+<!-- Step 5 Action Taken -->
+<div class="flex flex-col gap-1.5 group cursor-default">
+<div class="h-2 w-full rounded-full bg-surface-container transition-all"></div>
+<span class="font-label-sm text-label-sm text-outline truncate">5. Action Taken</span>
+</div>
+<!-- Step 6 Resolution Proposed -->
+<div class="flex flex-col gap-1.5 group cursor-default">
+<div class="h-2 w-full rounded-full bg-surface-container transition-all"></div>
+<span class="font-label-sm text-label-sm text-outline truncate">6. Resolution Prop.</span>
+</div>
+<!-- Step 7 Confirmed -->
+<div class="flex flex-col gap-1.5 group cursor-default">
+<div class="h-2 w-full rounded-full bg-surface-container transition-all"></div>
+<span class="font-label-sm text-label-sm text-outline truncate">7. Confirmed</span>
+</div>
+<!-- Step 8 Closed -->
+<div class="flex flex-col gap-1.5 group cursor-default">
+<div class="h-2 w-full rounded-full bg-surface-container transition-all"></div>
+<span class="font-label-sm text-label-sm text-outline truncate">8. Closed</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3-Column Power-User Layout -->
+<div class="p-space-lg grid grid-cols-12 gap-space-lg items-start">
+<!-- COLUMN 1: Requester & Asset Telemetry (3 cols / ~25%) -->
+<div class="col-span-12 xl:col-span-3 flex flex-col gap-space-md">
+<!-- Requester Identity Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-outline">Requester Profile</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">VIP User</span>
+</div>
+<div class="flex items-center gap-space-sm pt-1">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Corporate headshot of Alex Morgan, senior female brand designer, confident posture, subtle navy blazer in contemporary studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ1ezlX2tfF9w6GqnPHHbFueQy2mF88sGGgAjc_Z_YmXa60oHA-FkleYmQ6U5AwebzxVW3jXY2y8J2yu_Ew4IpNLuqrU4y_xbZowEEpp4xXyd2GxDAAs6wdMItwUqqa-zSc5e6TFXE7RDRdy14fUX7NxEb1gfjZjToFekvlyrVu-eOgIPZEHbBu2VqpeL4GarPxGHfWp8iI6QnsXun_GQK4BaU4eE6yGI1jdRyq8b93pA8-5TQ1CtO"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Alex Morgan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Senior Brand Designer • Marketing</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 pt-2 text-on-surface-variant font-body-sm text-body-sm bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary">pin_drop</span>
+<span class="text-on-surface font-medium truncate">HQ — Floor 3 East, Desk 312</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-outline">mail</span>
+<span class="truncate hover:underline cursor-pointer">alex.morgan@corp.internal</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-outline">chat</span>
+<span class="text-primary font-medium">Slack: @alex.m</span>
+</div>
+</div>
+<!-- Requester Ticket History -->
+<div class="flex items-center justify-between text-body-sm font-body-sm pt-1 px-1">
+<span class="text-on-surface-variant">Ticket History:</span>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-tertiary font-semibold text-xs">1 Resolved</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold text-xs">1 Reopened</span>
+</div>
+</div>
+</div>
+<!-- Device & Asset Telemetry Module -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">laptop_mac</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-outline">Device & Telemetry</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded font-mono">CORP-MBP-8492</span>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Hardware</span>
+<span class="text-on-surface font-semibold truncate ml-2">MacBook Pro 16" (M2 Max)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Warranty</span>
+<span class="text-tertiary font-medium">AppleCare+ (Active til 2026)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">OS Version</span>
+<span class="text-on-surface font-medium">macOS 14.5 Sonoma</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Wi-Fi NIC</span>
+<span class="text-on-surface font-mono text-xs">Broadcom BCM4377</span>
+</div>
+</div>
+<!-- Real-Time Network Vector Data -->
+<div class="mt-space-xs p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Client IP Lease</span>
+<span class="font-mono text-xs text-primary font-semibold bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-sm">10.14.82.114</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Gateway Health</span>
+<span class="font-mono text-xs text-error font-semibold flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-error"></span>
+              10.14.80.1 (Unresponsive)
+            </span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">AP Sector</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">AP-04 North</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">RSSI / Channel</span>
+<span class="text-on-surface font-mono text-xs font-semibold">-54 dBm • Ch 36 (5 GHz)</span>
+</div>
+<!-- Signal strength inline graphic bar -->
+<div class="w-full bg-surface-container-high rounded-full h-1.5 mt-1 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+</div>
+<!-- Uploaded Evidence & OCR Snippet -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-outline">User Uploaded Evidence</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">1 Attachment</span>
+</div>
+<div class="relative group rounded-lg overflow-hidden bg-inverse-surface cursor-pointer">
+<img class="w-full h-36 object-cover opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" data-alt="High resolution screenshot of Google Chrome browser error screen showing no internet connection dinosaur and DNS_PROBE_FINISHED_NO_INTERNET message" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw_y6ofwKT8XMmpM4kdXbsMb0MXtO_Mi29OaC4AcrtQEb7RuDAetMCcGsL-5f1bXIqKa7MOqZ2EQGtd5VIpS3vwFIWh0F3dDtw7PCBs31z2HbFxaI5hUel45y_bzhyp0h47xdu8G9wRLmDYfSDwp2vMbdkaNBJLP6LWsjwxowIM7RsWrF8wdR-B7G3umLuub59SO7sgyQZQZ_3z4UyOqO2PtYgBTQNJPnxRea3Jts4WB1o8C0bvf16"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-transparent to-transparent flex flex-col justify-end p-2.5">
+<span class="text-inverse-on-surface font-label-sm text-label-sm font-semibold truncate">screenshot_wifi_timeout.png</span>
+<span class="text-outline-variant font-body-sm text-body-sm text-xs">1.8 MB • Uploaded 10:14 AM</span>
+</div>
+</div>
+<!-- OCR Extracted Block -->
+<div class="bg-surface-container-high/60 rounded-lg p-space-sm flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">document_scanner</span>
+            OCR Diagnostic Output:
+          </div>
+<code class="font-mono text-xs text-error font-semibold bg-surface-container-lowest p-1.5 rounded select-all">
+            DNS_PROBE_FINISHED_NO_INTERNET
+          </code>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">
+            Client browser actively querying DNS root anchors while receiving null payloads from server 10.14.0.2.
+          </p>
+</div>
+</div>
+</div>
+<!-- COLUMN 2: AI Co-Pilot & Real-Time Investigation Stream (5 cols / ~45%) -->
+<div class="col-span-12 xl:col-span-6 flex flex-col gap-space-md">
+<!-- AI Co-Pilot Smart Card (Level 3 Elevation & Purple Tinted Perimeter) -->
+<div class="rounded-xl p-space-md shadow-md bg-gradient-to-br from-secondary-fixed/20 via-surface-container-lowest to-surface-container-lowest border border-secondary-fixed flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="h-7 w-7 rounded-lg bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">DeskAI Automated Triage Copilot</span>
+<span class="ml-2 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">94% Confidence</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-base cursor-pointer hover:text-primary transition-colors">thumb_up</span>
+<span class="material-symbols-outlined text-base cursor-pointer hover:text-error transition-colors">thumb_down</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest/80 p-space-sm rounded-lg flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Root Cause Analysis</span>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+            Requester is associated with <span class="font-mono font-semibold text-primary">Corp-Secure-Net</span> SSID but lacks upstream DNS resolution. Core DHCP gateway handed stale DNS server IP <span class="font-mono text-error font-semibold">10.14.0.2</span> instead of the secondary active resolver <span class="font-mono text-tertiary font-semibold">10.14.0.10</span>.
+          </p>
+<div class="flex items-center gap-1.5 pt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm text-tertiary">check_circle</span>
+<span>Floor quadrant verified: Desk 312 mapped directly to AP-04 North coverage area.</span>
+</div>
+</div>
+<!-- AI Suggested Remediation Buttons -->
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<button class="h-9 px-space-md rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-semibold hover:opacity-90 shadow-sm transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">cached</span>
+            Run Remote DNS Cache Flush on AP-04
+          </button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-high text-secondary font-label-md text-label-md font-semibold hover:bg-surface-container-highest transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">send_and_archive</span>
+            Send Prepared Remediation Steps to Alex
+          </button>
+</div>
+</div>
+<!-- Investigation Communication & Activity Feed Module -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm flex flex-col overflow-hidden">
+<!-- Segmented Tab Header -->
+<div class="flex items-center justify-between border-b border-surface-container px-space-md pt-space-xs bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2.5 font-label-md text-label-md font-bold text-primary border-b-2 border-primary transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">forum</span>
+              Requester Chat
+              <span class="h-2 w-2 rounded-full bg-primary ml-0.5"></span>
+</button>
+<button class="px-space-md py-2.5 font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base text-outline">lock</span>
+              Private Notes (Staff Only)
+              <span class="text-xs px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant">2</span>
+</button>
+<button class="px-space-md py-2.5 font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base text-outline">history</span>
+              Full Audit Trail
+            </button>
+</div>
+<span class="text-xs font-mono text-outline font-semibold">PRD FR-AUDIT-001</span>
+</div>
+<!-- Chat Feed Scroll Area -->
+<div class="p-space-md flex flex-col gap-space-md max-h-[460px] overflow-y-auto">
+<!-- Message 1: Requester -->
+<div class="flex items-start gap-space-sm max-w-[85%]">
+<img class="w-8 h-8 rounded-full object-cover mt-0.5" data-alt="Small circular avatar portrait of Alex Morgan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa6pJV2N674zru1rWt-Nmw4-QeR1QPl7F2Rwk3I83kksGQaWkv679iMQpOv2v2PndWaWjLUvCg6OhDSpBZ2THR0z2-EIlszWSAv_ToBVzsCKHIh_BlhRgFZhl5G-46NNdKpLMRdVzBRczX9-njmtJg_f2ghNSsjkZJ8eRgqeS-k5qefls24eqeipn6RIZHAP5_hmD8uMUKKUq_e6GXOOOa--v-n5Pltu-BNyszHRfjNROVKKOgMyc8"/>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Alex Morgan</span>
+<span class="font-body-sm text-body-sm text-outline text-xs">10:14 AM</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl rounded-tl-none text-on-surface font-body-md text-body-md shadow-sm">
+                My laptop shows full Wi-Fi bars on <span class="font-semibold text-primary font-mono">Corp-Secure-Net</span> but Slack and browser time out instantly when loading Figma.
+              </div>
+</div>
+</div>
+<!-- Message 2: System Telemetry Automation Hook -->
+<div class="flex items-center justify-center my-1">
+<div class="flex items-center gap-2 px-space-md py-1 rounded-full bg-surface-container-high text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm text-secondary">smart_toy</span>
+<span>10:18 AM — AP-04 North RF power cycle triggered by DeskAI Diagnostic Hook</span>
+</div>
+</div>
+<!-- Message 3: Technician Response -->
+<div class="flex items-start gap-space-sm max-w-[85%] self-end flex-row-reverse">
+<img alt="Marcus Vance Avatar" class="w-8 h-8 rounded-full object-cover mt-0.5" src="https://lh3.googleusercontent.com/aida/AEtjO1VfKuf5hm-0gozSoi8DaotWAzr9cEK4WMt9XWtk7O4nTMms4LDNpFXA1kYpqrVAl3kXR0e9nSwIoFayq-XX75_G6uNYrXl-W6DObI3-2ryVF1DQHBZYwL1JTa3fGpNJMwZK-Jl4Ov2Adho5cY8dlwsRJaM_V9HdpKlPYTztIiHSFAXA3lsXg8CO77iJaXiaeYTHHxzxJlvlNmn9Q586C7TjeEjWj4MEcxBF5R4VdaXS8J2Vl9lzl1cEo7M"/>
+<div class="flex flex-col gap-1 items-end">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm text-outline text-xs">10:22 AM</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Marcus Vance (IT Ops)</span>
+</div>
+<div class="bg-primary/10 text-on-surface p-space-sm rounded-xl rounded-tr-none font-body-md text-body-md shadow-sm">
+                Hi Alex, we restarted AP-4N. Can you verify if you are sitting on East or West side of the 3rd floor?
+              </div>
+</div>
+</div>
+<!-- Message 4: Requester Reply -->
+<div class="flex items-start gap-space-sm max-w-[85%]">
+<img class="w-8 h-8 rounded-full object-cover mt-0.5" data-alt="Small circular avatar portrait of Alex Morgan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA-FteHYC8ryHWrcYq3z2gsIZlhqMjPMMb8ieUd7OScOIa8-Nia039F0poCgKTVZGTCDPZ5FnfTzpvh8clD-V36wikrfGVdd1AZ3eJ_x4xxkhl-Nfy52BVS75_JF4Fq11WA52-NmX-MhY871TPxe8KKHZTZB3jeM_jzdAwrbyTxLrXdGgMmqcjeqBMbTHOE8fE5QheTxsnmllb8j_xeeITTLe-WzBcy16jyDF8t78gnLBkSdEwu9X3"/>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Alex Morgan</span>
+<span class="font-body-sm text-body-sm text-outline text-xs">10:25 AM</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl rounded-tl-none text-on-surface font-body-md text-body-md shadow-sm">
+                East side, right next to Conference Room 3B near the windows.
+              </div>
+</div>
+</div>
+</div>
+<!-- AI Draft Assist Floating Inset -->
+<div class="px-space-md py-space-xs bg-surface-container-low border-t border-surface-container">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">auto_fix_high</span>
+                DeskAI Suggested Reply
+              </span>
+<span class="font-label-sm text-label-sm text-outline">Smart Suggestion</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              "Thanks Alex. I've initiated a DNS lease renewal. Could you open Terminal and type <code class="font-mono bg-surface-container px-1 py-0.5 rounded text-xs not-italic font-semibold text-primary">sudo dscacheutil -flushcache</code> or reboot your Wi-Fi toggle?"
+            </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="px-space-sm py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold hover:opacity-90 transition-opacity" type="button">
+                Insert Draft into Chat
+              </button>
+<button class="px-space-sm py-1 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button">
+                Edit Draft
+              </button>
+</div>
+</div>
+</div>
+<!-- Chat Input Dock -->
+<div class="p-space-md border-t border-surface-container bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="relative">
+<textarea class="w-full p-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none" placeholder="Type a message or paste terminal diagnostics to Alex Morgan..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Attach Evidence" type="button">
+<span class="material-symbols-outlined text-lg">attach_file</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Code Snippet" type="button">
+<span class="material-symbols-outlined text-lg">code</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Insert Macro Template" type="button">
+<span class="material-symbols-outlined text-lg">description</span>
+</button>
+<span class="text-xs text-outline ml-2">Press Cmd+Enter to send</span>
+</div>
+<button class="h-9 px-space-md rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:opacity-95 shadow-sm transition-all flex items-center gap-1.5" type="button">
+<span>Send Reply to Alex</span>
+<span class="material-symbols-outlined text-base">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- COLUMN 3: Tasks Checklist & Diagnostic Tools (4 cols / ~30%) -->
+<div class="col-span-12 xl:col-span-3 flex flex-col gap-space-md">
+<!-- Investigation Sub-tasks Checklist (FR-TASK-001) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">checklist</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-outline">Sub-Tasks Checklist</span>
+</div>
+<span class="font-mono text-xs text-outline font-semibold">FR-TASK-001</span>
+</div>
+<div class="flex flex-col gap-space-xs pt-1">
+<!-- Item 1 (Done) -->
+<div class="flex items-start gap-2 p-space-xs rounded bg-surface-container-low">
+<input checked="" class="mt-1 h-4 w-4 rounded text-primary focus:ring-primary cursor-pointer accent-primary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface line-through decoration-outline">Verify AP-04 North gateway connectivity</span>
+<span class="font-body-sm text-body-sm text-tertiary text-xs">Marcus Vance • 10:18 AM</span>
+</div>
+</div>
+<!-- Item 2 (In Progress) -->
+<div class="flex items-start gap-2 p-space-xs rounded bg-primary-fixed/30">
+<input class="mt-1 h-4 w-4 rounded text-primary focus:ring-primary cursor-pointer accent-primary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Run remote DNS route trace</span>
+<span class="font-body-sm text-body-sm text-primary text-xs font-medium">Assigned to Marcus Vance • In Progress</span>
+</div>
+</div>
+<!-- Item 3 (Pending) -->
+<div class="flex items-start gap-2 p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<input class="mt-1 h-4 w-4 rounded text-primary focus:ring-primary cursor-pointer accent-primary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface">Validate DHCP IP pool lease saturation on VLAN 40</span>
+<span class="font-body-sm text-body-sm text-outline text-xs">Pending execution</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-1 py-1.5 rounded-lg border border-dashed border-outline/40 text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm">add</span>
+          Add Investigation Task
+        </button>
+</div>
+<!-- Remote Diagnostic Sandbox -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-base">terminal</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-outline">Live Diagnostic Sandbox</span>
+</div>
+<span class="h-2 w-2 rounded-full bg-error animate-ping"></span>
+</div>
+<!-- Terminal Console Visual Mock -->
+<div class="bg-inverse-surface rounded-lg p-space-sm font-mono text-xs flex flex-col gap-1.5 text-inverse-on-surface overflow-x-auto">
+<div class="flex items-center justify-between text-outline-variant pb-1 border-b border-outline/30">
+<span>root@ap-04-north:~# icmp_trace 10.14.80.1</span>
+<span class="text-tertiary">STDOUT</span>
+</div>
+<div class="text-error font-semibold">
+            PING 10.14.80.1 (10.14.80.1): 56 data bytes<br/>
+            Request timeout for icmp_seq 0<br/>
+            Request timeout for icmp_seq 1<br/>
+            --- 10.14.80.1 ping statistics ---<br/>
+            4 packets transmitted, 0 received, 100% packet loss
+          </div>
+<div class="text-secondary-fixed pt-1">
+            > nslookup internal.corp.net 10.14.0.2<br/>
+            ;; connection timed out; no servers could be reached (2000ms)
+          </div>
+</div>
+<!-- One-Click Diagnostic Actions -->
+<div class="flex flex-col gap-1.5 pt-1">
+<button class="w-full h-8 px-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-highest transition-colors flex items-center justify-between" type="button">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">restart_alt</span>
+              Restart Local AP (AP-04 North)
+            </span>
+<span class="text-outline text-xs font-mono">15s</span>
+</button>
+<button class="w-full h-8 px-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-highest transition-colors flex items-center justify-between" type="button">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary">autorenew</span>
+              Renew DHCP Pool Lease (VLAN 40)
+            </span>
+<span class="text-outline text-xs font-mono">Instant</span>
+</button>
+<button class="w-full h-8 px-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-highest transition-colors flex items-center justify-between" type="button">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-tertiary">hub</span>
+              View Network Topology Map
+            </span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Resolution Preparation Box -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-base">task_alt</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-outline">Resolution Summary Prep</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Ready to Stage</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-medium text-on-surface-variant">Closure Log Note</label>
+<textarea class="w-full p-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary resize-none" rows="3">DNS routing corrected on Access Point 04-North, verified client gateway connection via secondary DNS resolver 10.14.0.10.</textarea>
+</div>
+<!-- Evidence Attachment Slot -->
+<div class="border border-dashed border-outline-variant/60 rounded-lg p-space-sm flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-2xl text-outline mb-1">add_photo_alternate</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Drop Fix Verification Screenshot</span>
+<span class="font-body-sm text-body-sm text-outline text-xs">PNG, JPG up to 10MB</span>
+</div>
+<button class="w-full h-10 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:opacity-95 shadow-sm transition-all flex items-center justify-center gap-1.5 mt-1" type="button">
+<span class="material-symbols-outlined text-base">check_circle</span>
+          Complete & Submit Case IT-10482
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
