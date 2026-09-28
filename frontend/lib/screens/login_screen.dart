@@ -437,7 +437,7 @@ class _LoginScreenState extends State<LoginScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Deploy & access your IT Help Desk seamlessly across Web, Windows Desktop, and Android Mobile.',
+              'DeskAI is a Progressive Web App (PWA) and can be installed instantly on any device without downloading heavy files.',
               style: TextStyle(fontSize: 13, color: AppTheme.textSecondary),
             ),
             const SizedBox(height: 16),
@@ -446,20 +446,15 @@ class _LoginScreenState extends State<LoginScreen> {
               leading: Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(color: const Color(0xFF2563EB).withValues(alpha: 0.1), borderRadius: BorderRadius.circular(8)),
-                child: const Icon(Icons.desktop_windows, color: Color(0xFF2563EB), size: 24),
+                child: const Icon(Icons.install_mobile, color: Color(0xFF2563EB), size: 24),
               ),
-              title: const Text('Windows Desktop Installer (.exe)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-              subtitle: const Text('Standalone 1-click wizard installer with desktop shortcut and auto-update support.', style: TextStyle(fontSize: 11)),
+              title: const Text('Instant Mobile / Desktop Install (PWA)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+              subtitle: const Text('In Chrome, tap the 3 dots (⋮) menu > select "Add to Home screen" or "Install App" to use it as a native app.', style: TextStyle(fontSize: 11)),
               trailing: ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
-                icon: const Icon(Icons.download, size: 16),
-                label: const Text('Download EXE', style: TextStyle(fontSize: 11)),
-                onPressed: () {
-                  Navigator.pop(ctx);
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Downloading DeskAI_Operations_Setup_v1.0.exe...'), backgroundColor: Color(0xFF2563EB)),
-                  );
-                },
+                icon: const Icon(Icons.touch_app, size: 16),
+                label: const Text('Got it', style: TextStyle(fontSize: 11)),
+                onPressed: () => Navigator.pop(ctx),
               ),
             ),
             const Divider(height: 20),
@@ -468,21 +463,10 @@ class _LoginScreenState extends State<LoginScreen> {
               leading: Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(color: const Color(0xFF059669).withValues(alpha: 0.1), borderRadius: BorderRadius.circular(8)),
-                child: const Icon(Icons.android, color: Color(0xFF059669), size: 24),
+                child: const Icon(Icons.cloud_done_outlined, color: Color(0xFF059669), size: 24),
               ),
-              title: const Text('Android Mobile Application (.apk)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-              subtitle: const Text('Direct installable APK for on-the-go IT triage, technician task tracking & notifications.', style: TextStyle(fontSize: 11)),
-              trailing: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF059669), padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
-                icon: const Icon(Icons.download, size: 16),
-                label: const Text('Download APK', style: TextStyle(fontSize: 11)),
-                onPressed: () {
-                  Navigator.pop(ctx);
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Downloading DeskAI_Mobile_v1.0.apk...'), backgroundColor: Color(0xFF059669)),
-                  );
-                },
-              ),
+              title: const Text('Cloud Hosted Workspace', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+              subtitle: const Text('Always up-to-date with Gemini 2.5 Flash AI triage and real-time IT operations.', style: TextStyle(fontSize: 11)),
             ),
           ],
         ),
