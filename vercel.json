@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "public": true,
+  "outputDirectory": "frontend/build/web",
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "frontend/build/web/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontend/build/web/index.html"
+    }
+  ]
+}

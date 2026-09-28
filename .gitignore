@@ -23,9 +23,9 @@ frontend/.flutter-plugins
 frontend/.flutter-plugins-dependencies
 frontend/.packages
 frontend/.pub-cache/
-frontend/.pub/
-frontend/build/
-frontend/windows/flutter/ephemeral/
+frontend/build/*
+!frontend/build/web/
+!frontend/build/web/**
 frontend/*.iml
 frontend/.idea/
 
