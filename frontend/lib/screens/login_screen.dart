@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../core/theme.dart';
 import '../services/auth_service.dart';
 
@@ -437,36 +438,65 @@ class _LoginScreenState extends State<LoginScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'DeskAI is a Progressive Web App (PWA) and can be installed instantly on any device without downloading heavy files.',
+              'Choose your platform below to download direct installers or install instantly via PWA:',
               style: TextStyle(fontSize: 13, color: AppTheme.textSecondary),
             ),
             const SizedBox(height: 16),
-            ListTile(
-              contentPadding: EdgeInsets.zero,
-              leading: Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(color: const Color(0xFF2563EB).withValues(alpha: 0.1), borderRadius: BorderRadius.circular(8)),
-                child: const Icon(Icons.install_mobile, color: Color(0xFF2563EB), size: 24),
-              ),
-              title: const Text('Instant Mobile / Desktop Install (PWA)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-              subtitle: const Text('In Chrome, tap the 3 dots (⋮) menu > select "Add to Home screen" or "Install App" to use it as a native app.', style: TextStyle(fontSize: 11)),
-              trailing: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
-                icon: const Icon(Icons.touch_app, size: 16),
-                label: const Text('Got it', style: TextStyle(fontSize: 11)),
-                onPressed: () => Navigator.pop(ctx),
-              ),
-            ),
-            const Divider(height: 20),
+
+            // 1. Android APK
             ListTile(
               contentPadding: EdgeInsets.zero,
               leading: Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(color: const Color(0xFF059669).withValues(alpha: 0.1), borderRadius: BorderRadius.circular(8)),
-                child: const Icon(Icons.cloud_done_outlined, color: Color(0xFF059669), size: 24),
+                child: const Icon(Icons.android, color: Color(0xFF059669), size: 24),
               ),
-              title: const Text('Cloud Hosted Workspace', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-              subtitle: const Text('Always up-to-date with Gemini 2.5 Flash AI triage and real-time IT operations.', style: TextStyle(fontSize: 11)),
+              title: const Text('Android Mobile App (.apk)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+              subtitle: const Text('Direct installable standalone APK for Android phones and tablets (50.7 MB).', style: TextStyle(fontSize: 11)),
+              trailing: ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF059669), padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
+                icon: const Icon(Icons.download, size: 16),
+                label: const Text('Download APK', style: TextStyle(fontSize: 11)),
+                onPressed: () async {
+                  final uri = Uri.parse('/downloads/DeskAI_Mobile_v1.0.apk');
+                  await launchUrl(uri, mode: LaunchMode.externalApplication);
+                },
+              ),
+            ),
+            const Divider(height: 16),
+
+            // 2. Windows Desktop Setup
+            ListTile(
+              contentPadding: EdgeInsets.zero,
+              leading: Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(color: const Color(0xFF2563EB).withValues(alpha: 0.1), borderRadius: BorderRadius.circular(8)),
+                child: const Icon(Icons.desktop_windows, color: Color(0xFF2563EB), size: 24),
+              ),
+              title: const Text('Windows Desktop Setup (.zip / .bat)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+              subtitle: const Text('1-Click desktop shortcut installer for Windows 10/11.', style: TextStyle(fontSize: 11)),
+              trailing: ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
+                icon: const Icon(Icons.download, size: 16),
+                label: const Text('Download Setup', style: TextStyle(fontSize: 11)),
+                onPressed: () async {
+                  final uri = Uri.parse('/downloads/DeskAI_Windows_Setup.zip');
+                  await launchUrl(uri, mode: LaunchMode.externalApplication);
+                },
+              ),
+            ),
+            const Divider(height: 16),
+
+            // 3. Instant PWA
+            ListTile(
+              contentPadding: EdgeInsets.zero,
+              leading: Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(color: const Color(0xFF7C3AED).withValues(alpha: 0.1), borderRadius: BorderRadius.circular(8)),
+                child: const Icon(Icons.install_mobile, color: Color(0xFF7C3AED), size: 24),
+              ),
+              title: const Text('Or Install Instantly (PWA)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+              subtitle: const Text('In Chrome, tap Menu (⋮) > "Add to Home screen" or "Install App".', style: TextStyle(fontSize: 11)),
             ),
           ],
         ),
