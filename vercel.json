@@ -1,8 +1,9 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "public": true,
-  "outputDirectory": "frontend/build/web",
+  "buildCommand": null,
+  "outputDirectory": "public",
+  "framework": null,
   "headers": [
     {
       "source": "/downloads/(.*)",
