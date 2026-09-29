@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -421,6 +422,26 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  void _downloadFile(String path) async {
+    try {
+      final uri = Uri.parse(path);
+      if (kIsWeb) {
+        await launchUrl(uri, webOnlyWindowName: '_self');
+      } else {
+        await launchUrl(uri, mode: LaunchMode.externalApplication);
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Download failed: $e'),
+            backgroundColor: AppTheme.error,
+          ),
+        );
+      }
+    }
+  }
+
   void _showDownloadModal() {
     showDialog(
       context: context,
@@ -457,10 +478,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF059669), padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
                 icon: const Icon(Icons.download, size: 16),
                 label: const Text('Download APK', style: TextStyle(fontSize: 11)),
-                onPressed: () async {
-                  final uri = Uri.parse('/downloads/DeskAI_Mobile_v1.0.apk');
-                  await launchUrl(uri, mode: LaunchMode.externalApplication);
-                },
+                onPressed: () => _downloadFile('/downloads/DeskAI_Mobile_v1.0.apk'),
               ),
             ),
             const Divider(height: 16),
@@ -479,10 +497,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
                 icon: const Icon(Icons.download, size: 16),
                 label: const Text('Download Setup', style: TextStyle(fontSize: 11)),
-                onPressed: () async {
-                  final uri = Uri.parse('/downloads/DeskAI_Windows_Setup.zip');
-                  await launchUrl(uri, mode: LaunchMode.externalApplication);
-                },
+                onPressed: () => _downloadFile('/downloads/DeskAI_Windows_Setup.zip'),
               ),
             ),
             const Divider(height: 16),
