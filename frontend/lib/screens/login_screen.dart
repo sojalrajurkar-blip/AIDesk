@@ -424,8 +424,8 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  static const _apkUrl = 'https://github.com/sojalrajurkar-blip/AIDesk/raw/fcc9480a4a9b6c085022e38c92da15a3bbdd18c5/frontend/web/downloads/DeskAI_Mobile_v1.0.apk';
-  static const _zipUrl = 'https://github.com/sojalrajurkar-blip/AIDesk/raw/fcc9480a4a9b6c085022e38c92da15a3bbdd18c5/frontend/web/downloads/DeskAI_Windows_Setup.zip';
+  static const _apkUrl = 'https://raw.githubusercontent.com/sojalrajurkar-blip/AIDesk/19274c9343c2dc37433f35ee68f4ba9d5b24cfa6/frontend/web/downloads/DeskAI_Mobile_v1.0.apk';
+  static const _zipUrl = 'https://raw.githubusercontent.com/sojalrajurkar-blip/AIDesk/19274c9343c2dc37433f35ee68f4ba9d5b24cfa6/frontend/web/downloads/DeskAI_Windows_Setup.zip';
 
   void _downloadFile(String url, String filename) {
     try {
