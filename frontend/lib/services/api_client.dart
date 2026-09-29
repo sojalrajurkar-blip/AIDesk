@@ -54,7 +54,7 @@ class ApiClient {
 
       final response = await http
           .get(uri, headers: _headers())
-          .timeout(const Duration(seconds: 10));
+          .timeout(const Duration(seconds: 30));
       return _handleResponse<T>(response, parser);
     } catch (e) {
       return ApiResponse<T>(
@@ -84,7 +84,7 @@ class ApiClient {
             headers: _headers(),
             body: body != null ? jsonEncode(body) : null,
           )
-          .timeout(const Duration(seconds: 12));
+          .timeout(const Duration(seconds: 30));
       return _handleResponse<T>(response, parser);
     } catch (e) {
       return ApiResponse<T>(
@@ -114,7 +114,7 @@ class ApiClient {
             headers: _headers(),
             body: body != null ? jsonEncode(body) : null,
           )
-          .timeout(const Duration(seconds: 12));
+          .timeout(const Duration(seconds: 30));
       return _handleResponse<T>(response, parser);
     } catch (e) {
       return ApiResponse<T>(
@@ -139,7 +139,7 @@ class ApiClient {
       }
       final response = await http
           .delete(uri, headers: _headers())
-          .timeout(const Duration(seconds: 10));
+          .timeout(const Duration(seconds: 30));
       return _handleResponse<T>(response, parser);
     } catch (e) {
       return ApiResponse<T>(
