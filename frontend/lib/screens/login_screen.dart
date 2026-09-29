@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../core/theme.dart';
 import '../services/auth_service.dart';
+import '../utils/download_helper.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -426,15 +427,23 @@ class _LoginScreenState extends State<LoginScreen> {
   static const _apkUrl = 'https://github.com/sojalrajurkar-blip/AIDesk/raw/main/frontend/web/downloads/DeskAI_Mobile_v1.0.apk';
   static const _zipUrl = 'https://github.com/sojalrajurkar-blip/AIDesk/raw/main/frontend/web/downloads/DeskAI_Windows_Setup.zip';
 
-  void _downloadFile(String path) async {
+  void _downloadFile(String url, String filename) {
     try {
-      final uri = Uri.parse(path);
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
+      downloadFileDirectly(url, filename);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Downloading $filename... Check phone notifications.'),
+            backgroundColor: AppTheme.success,
+            duration: const Duration(seconds: 4),
+          ),
+        );
+      }
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Download action: $e'),
+            content: Text('Download error: $e'),
             backgroundColor: AppTheme.error,
           ),
         );
@@ -446,9 +455,9 @@ class _LoginScreenState extends State<LoginScreen> {
     Clipboard.setData(ClipboardData(text: text));
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('$label link copied! Paste in Chrome browser to download.'),
-        backgroundColor: AppTheme.success,
-        duration: const Duration(seconds: 4),
+        content: Text('$label link copied!'),
+        backgroundColor: AppTheme.primary,
+        duration: const Duration(seconds: 3),
       ),
     );
   }
@@ -471,7 +480,7 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                'Choose your platform below to download direct installers or install instantly via PWA:',
+                'Tap "Download" below to start instant download directly in your mobile browser:',
                 style: TextStyle(fontSize: 13, color: AppTheme.textSecondary),
               ),
               const SizedBox(height: 16),
@@ -491,14 +500,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     IconButton(
                       icon: const Icon(Icons.copy, size: 18, color: Color(0xFF059669)),
-                      tooltip: 'Copy Direct Download Link',
-                      onPressed: () => _copyToClipboard(_apkUrl, 'APK Download'),
+                      tooltip: 'Copy Link',
+                      onPressed: () => _copyToClipboard(_apkUrl, 'APK Link'),
                     ),
                     ElevatedButton.icon(
-                      style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF059669), padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8)),
+                      style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF059669), padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
                       icon: const Icon(Icons.download, size: 16),
-                      label: const Text('Download', style: TextStyle(fontSize: 11)),
-                      onPressed: () => _downloadFile(_apkUrl),
+                      label: const Text('Download APK', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                      onPressed: () => _downloadFile(_apkUrl, 'DeskAI_Mobile_v1.0.apk'),
                     ),
                   ],
                 ),
@@ -520,14 +529,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     IconButton(
                       icon: const Icon(Icons.copy, size: 18, color: Color(0xFF2563EB)),
-                      tooltip: 'Copy Windows Setup Link',
-                      onPressed: () => _copyToClipboard(_zipUrl, 'Windows Setup'),
+                      tooltip: 'Copy Link',
+                      onPressed: () => _copyToClipboard(_zipUrl, 'Windows Link'),
                     ),
                     ElevatedButton.icon(
-                      style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8)),
+                      style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
                       icon: const Icon(Icons.download, size: 16),
-                      label: const Text('Download', style: TextStyle(fontSize: 11)),
-                      onPressed: () => _downloadFile(_zipUrl),
+                      label: const Text('Download Setup', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                      onPressed: () => _downloadFile(_zipUrl, 'DeskAI_Windows_Setup.zip'),
                     ),
                   ],
                 ),
