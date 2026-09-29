@@ -39,6 +39,21 @@ class ApiClient {
     return map;
   }
 
+  static const Duration _timeout = Duration(seconds: 45);
+
+  static Future<http.Response> _retryRequest(Future<http.Response> Function() requestFn) async {
+    int attempts = 0;
+    while (true) {
+      attempts++;
+      try {
+        return await requestFn().timeout(_timeout);
+      } catch (e) {
+        if (attempts >= 2) rethrow;
+        await Future.delayed(const Duration(milliseconds: 1500));
+      }
+    }
+  }
+
   static Future<ApiResponse<T>> get<T>(
     String path, {
     Map<String, dynamic>? queryParams,
@@ -52,9 +67,7 @@ class ApiClient {
         );
       }
 
-      final response = await http
-          .get(uri, headers: _headers())
-          .timeout(const Duration(seconds: 30));
+      final response = await _retryRequest(() => http.get(uri, headers: _headers()));
       return _handleResponse<T>(response, parser);
     } catch (e) {
       return ApiResponse<T>(
@@ -78,13 +91,13 @@ class ApiClient {
           queryParameters: queryParams.map((k, v) => MapEntry(k, v.toString())),
         );
       }
-      final response = await http
-          .post(
-            uri,
-            headers: _headers(),
-            body: body != null ? jsonEncode(body) : null,
-          )
-          .timeout(const Duration(seconds: 30));
+      final response = await _retryRequest(
+        () => http.post(
+          uri,
+          headers: _headers(),
+          body: body != null ? jsonEncode(body) : null,
+        ),
+      );
       return _handleResponse<T>(response, parser);
     } catch (e) {
       return ApiResponse<T>(
@@ -108,13 +121,13 @@ class ApiClient {
           queryParameters: queryParams.map((k, v) => MapEntry(k, v.toString())),
         );
       }
-      final response = await http
-          .put(
-            uri,
-            headers: _headers(),
-            body: body != null ? jsonEncode(body) : null,
-          )
-          .timeout(const Duration(seconds: 30));
+      final response = await _retryRequest(
+        () => http.put(
+          uri,
+          headers: _headers(),
+          body: body != null ? jsonEncode(body) : null,
+        ),
+      );
       return _handleResponse<T>(response, parser);
     } catch (e) {
       return ApiResponse<T>(
@@ -137,9 +150,9 @@ class ApiClient {
           queryParameters: queryParams.map((k, v) => MapEntry(k, v.toString())),
         );
       }
-      final response = await http
-          .delete(uri, headers: _headers())
-          .timeout(const Duration(seconds: 30));
+      final response = await _retryRequest(
+        () => http.delete(uri, headers: _headers()),
+      );
       return _handleResponse<T>(response, parser);
     } catch (e) {
       return ApiResponse<T>(

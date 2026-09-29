@@ -424,7 +424,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  static const _apkUrl = 'https://raw.githubusercontent.com/sojalrajurkar-blip/AIDesk/19274c9343c2dc37433f35ee68f4ba9d5b24cfa6/frontend/web/downloads/DeskAI_Mobile_v1.0.apk';
+  static const _apkUrl = 'https://github.com/sojalrajurkar-blip/AIDesk/raw/main/frontend/web/downloads/DeskAI_Mobile_v2.apk';
   static const _zipUrl = 'https://raw.githubusercontent.com/sojalrajurkar-blip/AIDesk/19274c9343c2dc37433f35ee68f4ba9d5b24cfa6/frontend/web/downloads/DeskAI_Windows_Setup.zip';
 
   void _downloadFile(String url, String filename) {
@@ -507,7 +507,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF059669), padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
                       icon: const Icon(Icons.download, size: 16),
                       label: const Text('Download APK', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
-                      onPressed: () => _downloadFile(_apkUrl, 'DeskAI_Mobile_v1.0.apk'),
+                      onPressed: () => _downloadFile(_apkUrl, 'DeskAI_Mobile_v2.apk'),
                     ),
                   ],
                 ),

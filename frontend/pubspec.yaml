@@ -1,7 +1,7 @@
 name: ai_office_it_help_desk
 description: "AI Office IT Help Desk — Autonomous IT Incident Management Platform"
 publish_to: "none"
-version: 2.0.0+1
+version: 2.0.2+3
 
 environment:
   sdk: ^3.5.0
