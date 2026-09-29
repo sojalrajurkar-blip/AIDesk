@@ -117,6 +117,10 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
                             DropdownMenuItem(value: 'TEAM_LEAD', child: Text('Team Lead')),
                             DropdownMenuItem(value: 'MANAGER', child: Text('Manager')),
                             DropdownMenuItem(value: 'ADMIN', child: Text('Admin')),
+                            DropdownMenuItem(
+                              value: 'LOGOUT',
+                              child: Text('🚪 Sign Out (Logout)', style: TextStyle(color: AppTheme.error, fontWeight: FontWeight.bold)),
+                            ),
                           ]
                         : const [
                             DropdownMenuItem(value: 'REQUESTER', child: Text('Requester (Alex Rivera)')),
@@ -124,9 +128,15 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
                             DropdownMenuItem(value: 'TEAM_LEAD', child: Text('Team Lead (Sarah J.)')),
                             DropdownMenuItem(value: 'MANAGER', child: Text('Manager (Marcus V.)')),
                             DropdownMenuItem(value: 'ADMIN', child: Text('Super Admin (Elena R.)')),
+                            DropdownMenuItem(
+                              value: 'LOGOUT',
+                              child: Text('🚪 Sign Out (Logout)', style: TextStyle(color: AppTheme.error, fontWeight: FontWeight.bold)),
+                            ),
                           ],
                     onChanged: (newRole) {
-                      if (newRole != null && newRole != currentRole) {
+                      if (newRole == 'LOGOUT') {
+                        auth.logout();
+                      } else if (newRole != null && newRole != currentRole) {
                         auth.switchDemoRole(newRole);
                       }
                     },
@@ -135,17 +145,17 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
               ],
             ),
           ),
-          SizedBox(width: isMobile ? 6 : 12),
+          SizedBox(width: isMobile ? 4 : 10),
 
           // Notification Bell
           IconButton(
             tooltip: 'In-app Notifications',
             padding: EdgeInsets.zero,
-            constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
+            constraints: const BoxConstraints(minWidth: 30, minHeight: 30),
             icon: Stack(
               clipBehavior: Clip.none,
               children: [
-                const Icon(Icons.notifications_outlined, color: AppTheme.textSecondary, size: 20),
+                const Icon(Icons.notifications_outlined, color: AppTheme.textSecondary, size: 19),
                 if (notif.unreadCount > 0)
                   Positioned(
                     right: -2,
@@ -174,17 +184,17 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           SizedBox(width: isMobile ? 4 : 8),
 
-          // User Profile & Logout
+          // Prominent User Profile & Logout
           if (auth.currentUser != null) ...[
             if (!isMobile) ...[
               CircleAvatar(
-                radius: 14,
+                radius: 13,
                 backgroundColor: AppTheme.primary,
                 child: Text(
                   auth.currentUser!.fullName.isNotEmpty
                       ? auth.currentUser!.fullName[0]
                       : 'U',
-                  style: const TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold),
+                  style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
                 ),
               ),
               const SizedBox(width: 6),
@@ -196,14 +206,38 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
                   color: AppTheme.textPrimary,
                 ),
               ),
-              const SizedBox(width: 4),
+              const SizedBox(width: 8),
             ],
-            IconButton(
-              icon: const Icon(Icons.logout, size: 20, color: AppTheme.error),
-              tooltip: 'Sign Out (${auth.currentUser!.fullName})',
-              padding: EdgeInsets.zero,
-              constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
-              onPressed: () => auth.logout(),
+            // Clearly Visible Red Logout Button for Mobile & Desktop
+            InkWell(
+              onTap: () => auth.logout(),
+              borderRadius: BorderRadius.circular(6),
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: isMobile ? 7 : 10,
+                  vertical: isMobile ? 5 : 6,
+                ),
+                decoration: BoxDecoration(
+                  color: AppTheme.error.withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(6),
+                  border: Border.all(color: AppTheme.error.withValues(alpha: 0.3)),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.logout_rounded, size: 14, color: AppTheme.error),
+                    const SizedBox(width: 3),
+                    Text(
+                      'Logout',
+                      style: TextStyle(
+                        fontSize: isMobile ? 10 : 11,
+                        fontWeight: FontWeight.w700,
+                        color: AppTheme.error,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ],
